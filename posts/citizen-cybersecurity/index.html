@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Will Neville">
+    <meta name="description" content="Musings about Emacs, Programming, Video Games and Education">
+    <meta name="keywords" content="blog,developer,personal,emacs,education">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Citizen&#39;s Guide to Cybersecurity"/>
+<meta name="twitter:description" content="TL;DR - You should use a password manager and two factor authentication. Problem Nowadays, an individual&rsquo;s online presence is dictated by many, many accounts. Each account has some primary identifier - typically a username, or more commonly an email address. Additionally, each account has its own password. We&rsquo;ve been taught that these passwords must be secure - combinations of letters, number and symbols that would be difficult for someone to guess."/>
+
+    <meta property="og:title" content="A Citizen&#39;s Guide to Cybersecurity" />
+<meta property="og:description" content="TL;DR - You should use a password manager and two factor authentication. Problem Nowadays, an individual&rsquo;s online presence is dictated by many, many accounts. Each account has some primary identifier - typically a username, or more commonly an email address. Additionally, each account has its own password. We&rsquo;ve been taught that these passwords must be secure - combinations of letters, number and symbols that would be difficult for someone to guess." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dubnev.github.io/posts/citizen-cybersecurity/" />
+<meta property="article:published_time" content="2019-09-26T00:00:00-04:00" />
+<meta property="article:modified_time" content="2019-09-26T00:00:00-04:00" />
+
+
+    
+      <base href="https://dubnev.github.io/posts/citizen-cybersecurity/">
+    
+    <title>
+  A Citizen&#39;s Guide to Cybersecurity · Bitwise Operations
+</title>
+
+    
+      <link rel="canonical" href="https://dubnev.github.io/posts/citizen-cybersecurity/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://dubnev.github.io/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://dubnev.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://dubnev.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://dubnev.github.io/">
+      Bitwise Operations
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://dubnev.github.io/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://dubnev.github.io/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://dubnev.github.io/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://dubnev.github.io/contact/">Contact me</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">A Citizen&#39;s Guide to Cybersecurity</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-09-26T00:00:00-04:00'>
+                September 26, 2019
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4 minutes read
+            </span>
+          </div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+
+<h2 id="tl-dr-you-should-use-a-password-manager-and-two-factor-authentication">TL;DR - You should use a password manager and two factor authentication.</h2>
+
+<h2 id="problem">Problem</h2>
+
+<p>Nowadays, an individual&rsquo;s online presence is dictated by many, many accounts.
+Each account has some primary identifier - typically a username, or more commonly an email address.
+Additionally, each account has its own password.
+We&rsquo;ve been taught that these passwords must be <em>secure</em> - combinations of letters, number and symbols that would be difficult for someone to guess.</p>
+
+<p>Relevant XKCD
+<img src="https://imgs.xkcd.com/comics/password_strength.png" alt="" /></p>
+
+<p>It is not reasonable for most people to remember dozens of unique passwords, especially if the passwords themselves are difficult to remember.
+As a result, passwords invevitably get <em>re-used</em> across accounts.
+Inherently, this isn&rsquo;t an issue, right? Only you know the password.</p>
+
+<p><strong>Wrong.</strong></p>
+
+<p><strong>TODO insert links to articles about breaches</strong></p>
+
+<p>You should assume that at any point, a malicious third party could get access to one of your accounts.</p>
+
+<p>If you&rsquo;ve been using the same email for various services, as well as re-using the same password, then you have an issue.
+The attacker compromised one site, but got access to many of your accounts.</p>
+
+<p>Diversifying the email addresses you use for registration is not practical, so it&rsquo;s much better to make sure every password you use is distinct.</p>
+
+<p>How can we achieve this?</p>
+
+<h2 id="diversifying-your-passwords">Diversifying your passwords</h2>
+
+<h3 id="cipher">Cipher</h3>
+
+<p>One option is to create a <em>cipher</em> - a pattern to generate passwords on a per site basis.</p>
+
+<p>As a case study, let&rsquo;s create a Pokemon cipher to manage our passwords.</p>
+
+<p>Our key will be the domain of the service - for example, &ldquo;facebook.com&rdquo;.
+Our password formula could be as follows:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">password = 
+    First pokemon whose name starts with first letter of domain 
+    + number of letters in domain 
+    + &#34;!&#34; if domain length is even, else &#34;?&#34; 
+    + First pokemon whose name starts with last letter of domain</pre></div>
+<p>Using &ldquo;facebook.com&rdquo; as an example, the first pokemon whose name starts with F is &ldquo;Fearow&rdquo;, the domain has 8 letters in it, and the first pokemon whose name starts with &ldquo;k&rdquo; is &ldquo;Kadabra&rdquo;, so our password would be: <code>Fearow8!Kadabra</code>.</p>
+
+<p>This approach would generally give us a unique password for each service, unless the domains have a common first letter, last letter and length.</p>
+
+<p>The first problem of this approach is that everyone I&rsquo;ve spoken to who uses a cipher to encode their passwords <em>loves</em> to talk about how they use a cipher to encode their passwords.
+This is tongue and cheek, but don&rsquo;t share your security implementation details ;)</p>
+
+<p>The real problem with this approach is that you&rsquo;re introducing a <em>pattern</em> into your passwords.</p>
+
+<p>Let&rsquo;s say that a few of your passwords using this structure get compromised in large scale breaches.
+The compromised data that exists on the web looks like so:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">facebook Fearow8!Kadabra
+twitter Tentacool7?Rattata
+instagram Ivysaur9?Metapod</pre></div>
+<p>Uh oh. All of a sudden, that cipher doesn&rsquo;t seem so secure anymore - anybody who notices the pattern and determines your cipher formula has gained access to <em>all of your passwords</em>.</p>
+
+<p>There are methods you could take you try to make your cipher more robust and &ldquo;uncrackable&rdquo;, but the bad news is that anything <em>you</em> design will inherently be crackable.</p>
+
+<p>Well, what if you didn&rsquo;t know any of your own passwords?</p>
+
+<h3 id="password-manager">Password Manager</h3>
+
+<p>A <em>password manager</em> is a piece of software you can use to store all of your passwords.</p>
+
+<p><strong>ALARM BELLS, car tires screeching, screams in the distance</strong></p>
+
+<p>&ldquo;Wait, you want me to put all of my passwords into one location? That seems <em>wildly</em> insecure. What happens if an attacker gets access to my vault?&rdquo;</p>
+
+<p>Hear me out, I promise that this is actually the most secure way you could manage your passwords as an average tech savvy citizen.</p>
+
+<p>Using a password manager, you can generate random passwords for every account you create. When you visit those websites, rather than typing in the password manually, you can
+paste it directly from the password manager.</p>
+
+<p>What a win, right? Our password diversification problem is solved - we have a unique password per service, so if any of those become compromised, you can sleep at night knowing that none of your <em>other</em> accounts have been compromised.</p>
+
+<p>The downside of this approach is that additional mental load is added when trying to log onto a service, especially on mobile. When prompted for a password, you must switch to your manager, enter the password for that, traverse to the account password you need, copy it, switch back to the site, and paste it in. I hear you, that&rsquo;s a pain, but in my eyes it&rsquo;s worth it for the security.</p>
+
+<p>We&rsquo;re not quite done talking about password managers. There are two things you need to keep in mind: your master password must be easily memorizable but very secure, and you <em>must</em> enable two factor authentication on it.</p>
+
+<h4 id="master-password-security">Master Password Security</h4>
+
+<p>Scroll back up and take a look at that xkcd comic again.</p>
+
+<h2 id="two-factor-authentication">Two Factor Authentication</h2>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bitwiseoperations" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>git reset --hard HEAD~42</p>
+    
+     © 2019
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
