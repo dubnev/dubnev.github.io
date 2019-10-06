@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Bitwise Operations</title>
-    <link>https://www.dubnev.com/posts/</link>
+    <link>https://dubnev.com/posts/</link>
     <description>Recent content in Posts on Bitwise Operations</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 26 Sep 2019 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://www.dubnev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dubnev.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Citizen&#39;s Guide to Cybersecurity</title>
-      <link>https://www.dubnev.com/posts/citizen-cybersecurity/</link>
+      <link>https://dubnev.com/posts/citizen-cybersecurity/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
       
-      <guid>https://www.dubnev.com/posts/citizen-cybersecurity/</guid>
+      <guid>https://dubnev.com/posts/citizen-cybersecurity/</guid>
       <description>TL;DR - You should use a password manager and two factor authentication. Problem Nowadays, an individual&amp;rsquo;s online presence is dictated by many, many accounts. Each account has some primary identifier - typically a username, or more commonly an email address. Additionally, each account has its own password. We&amp;rsquo;ve been taught that these passwords must be secure - combinations of letters, number and symbols that would be difficult for someone to guess.</description>
     </item>
     
