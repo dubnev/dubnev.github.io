@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bitwise Operations</title>
-    <link>https://dubnev.com/</link>
+    <link>https://wneville.com/</link>
     <description>Recent content on Bitwise Operations</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 02 Oct 2019 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://dubnev.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wneville.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My Ongoing Journey with Emacs</title>
-      <link>https://dubnev.com/posts/my-emacs-journey/</link>
+      <link>https://wneville.com/posts/my-emacs-journey/</link>
       <pubDate>Wed, 02 Oct 2019 00:00:00 -0400</pubDate>
       
-      <guid>https://dubnev.com/posts/my-emacs-journey/</guid>
+      <guid>https://wneville.com/posts/my-emacs-journey/</guid>
       <description>init I&amp;rsquo;m rapidly becoming known as &amp;ldquo;that Emacs guy&amp;rdquo; in my office.
 I&amp;rsquo;m very vocal about my love for this ~35 year old piece of software, and (unsuccessfully) evangelize it amongst my peers.
 Whenever one of my coworkers shows the smallest amount of interest in it, such as &amp;ldquo;Hey that presentation you gave with the code blocks, what was that in?&amp;rdquo;, it&amp;rsquo;s off to the races. I&amp;rsquo;m prone to inundate them with additional reading materials and youtube videos about emacs and org-mode and why they should also consider using it to organize their life.</description>
@@ -24,19 +24,19 @@ Whenever one of my coworkers shows the smallest amount of interest in it, such a
     
     <item>
       <title>A Citizen&#39;s Guide to Cybersecurity</title>
-      <link>https://dubnev.com/posts/citizen-cybersecurity/</link>
+      <link>https://wneville.com/posts/citizen-cybersecurity/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
       
-      <guid>https://dubnev.com/posts/citizen-cybersecurity/</guid>
+      <guid>https://wneville.com/posts/citizen-cybersecurity/</guid>
       <description>TL;DR - You should use a password manager and two factor authentication. What&amp;rsquo;s the haps, homeslice? Nowadays, an individual&amp;rsquo;s online presence is dictated by many, many accounts. Each account has some primary identifier - typically a username, or more commonly an email address. Additionally, each account has its own password. We&amp;rsquo;ve been taught that these passwords must be secure - combinations of letters, number and symbols that would be difficult for someone to guess.</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://dubnev.com/projects/</link>
+      <link>https://wneville.com/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dubnev.com/projects/</guid>
+      <guid>https://wneville.com/projects/</guid>
       <description>Nothing to see here right now sadly&amp;hellip;working on it!</description>
     </item>
     
