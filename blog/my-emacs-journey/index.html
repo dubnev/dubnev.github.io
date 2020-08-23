@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>My Ongoing Journey with Emacs | Frame Perfect</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="A brief summary of my journey to becoming exclusively an Emacs user for coding and self-documentation">
+  <meta name="keywords" content="emacs , clojure , lisp , projectile">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="My Ongoing Journey with Emacs" />
+  <meta name="twitter:description" content="A brief summary of my journey to becoming exclusively an Emacs user for coding and self-documentation"/>
+  <meta name="twitter:site" content="https://twitter.com/wneville_" />
+  <meta name="twitter:creator" content="https://twitter.com/wneville_" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.2cb93c91050d1853bf971cc31e00122edd6e0f405aa1de3b7f8ef67ea3b5a79a.css" integrity="sha256-LLk8kQUNGFO/lxzDHgASLt1uD0Baod47f472fqO1p5o="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/wneville.com"
+      },
+      "articleSection" : "blog",
+      "name" : "My Ongoing Journey with Emacs",
+      "headline" : "My Ongoing Journey with Emacs",
+      "description" : "A brief summary of my journey to becoming exclusively an Emacs user for coding and self-documentation",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2019",
+      "datePublished": "2019-10-02 00:00:00 -0400 EDT",
+      "dateModified" : "2019-10-02 00:00:00 -0400 EDT",
+      "url" : "https:\/\/wneville.com\/blog\/my-emacs-journey\/",
+      "wordCount" : "2312",
+      "keywords" : ["emacs", "clojure", "lisp", "projectile", "Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">My Ongoing Journey with Emacs</h1>
+            <time datetime="2019-10-02 00:00:00 -0400 EDT" class="post__date">Oct 2 2019</time> 
+          </header>
+          <article class="post__content">
+              
+<h2 id="init">init<a class="anchor" href="#init">#</a></h2>
+<p>I&rsquo;m rapidly becoming known as &ldquo;that Emacs guy&rdquo; in my office.</p>
+<p>I&rsquo;m very vocal about my love for this ~35 year old piece of software, and (unsuccessfully) evangelize it amongst my peers.</p>
+<p>Whenever one of my coworkers shows the smallest amount of interest in it, such as &ldquo;Hey that presentation you gave with the code blocks, what was that in?&rdquo;, it&rsquo;s off to the races.
+I&rsquo;m prone to inundate them with additional reading materials and youtube videos about emacs and org-mode and why they should also consider using it to organize their life.</p>
+<p>Naturally, I&rsquo;m rarely asked about it twice.</p>
+<p>I still consider myself to be very junior as an Emacs user. There&rsquo;s much I do not know, and even more that I do not know that I do not know.</p>
+<p>As of this writing, I&rsquo;ve been casually interested in Emacs for about two years, and have been a fervent user with it as my primary IDE and organization tool for the past six-eight months.</p>
+<p>With this post, I&rsquo;m hoping to detail out my ever ongoing journey as an Emacs user. I&rsquo;m hoping that this will prove to be useful to newcomers to Emacs, or that it will at least expand my currently very
+small social network of Emacs users.</p>
+<h2 id="history">history<a class="anchor" href="#history">#</a></h2>
+<h3 id="the-dark-ages">the dark ages<a class="anchor" href="#the-dark-ages">#</a></h3>
+<p>Let&rsquo;s get one thing out of the way - while pursuing my computer science degree in college, I was mostly a Vim user.</p>
+<p>I wasn&rsquo;t really a power user, but I could navigate effectively.
+My Vim config was mostly copied from others on the internet, but without understanding what everything did.
+Once I graduated college and took a non-coding job, I didn&rsquo;t really have much text editing work to do, and I dropped off Vim.</p>
+<p>Vim is still my go-to when remoting into servers and making quick changes, which honestly is the perfect use case for it.</p>
+<h3 id="pursuing-enlightenment">pursuing enlightenment<a class="anchor" href="#pursuing-enlightenment">#</a></h3>
+<p>Emacs has been on my radar ever since I started getting into programming, but my first attempt at using it was probably in 2015.
+I was working as a technician at an IT helpdesk, so I wasn&rsquo;t very opinionated about my text editors yet.
+A friend of mine was working at a startup doing Android work, and his boss at the time used Emacs keybindings in IntelliJ.
+Apparently whenever his boss came over and wanted to type something, he would fail due to the built in IntelliJ bindings, so he &ldquo;strongly encouraged&rdquo; my friend to switch.</p>
+<p>After hearing about the interesting keybindings, I thought I&rsquo;d go straight to the source: I downloaded Emacs to see what it was all about.</p>
+<p>I probably lasted less than 5 minutes. It seemed so old school! The splash screen was ugly, I didn&rsquo;t know what all the UI elements were, and I struggled through the built in tutorial.</p>
+<p>I promptly uninstalled Emacs, and moved on with my life, proclaiming that it wasn&rsquo;t for me.</p>
+<p>I switched jobs to an Ad Tech company doing Tier 1.5 work (vendor certification work), and during this time I mostly used Notepad++ for jamming down random notes.
+I never saved any of them, so I probably ended that job with 300 tabs in NP++ memory.</p>
+<h3 id="reattempting-enlightenment">reattempting enlightenment<a class="anchor" href="#reattempting-enlightenment">#</a></h3>
+<p>In early 2017, I got myself my first real programming job - huzzah!
+The role was in the IT sector of a bank, and I was working on a platform that exposed APIs for working with in-house infrastructure.
+This was a greenfield project, and we decided to build it with a container and microservice-first approach.
+Being a large enterprise financial company, we settled on the JVM as our application runtime, with Java as the core language.
+Naturally, IntelliJ was the IDE of choice.</p>
+<p>It wasn&rsquo;t long until I discovered Clojure.
+Clojure is a functional programming language - a lisp that runs in the JVM. It&rsquo;s elegant and production ready.
+To this day, I&rsquo;ve not had the opportunity to work with Clojure much, but I&rsquo;ve always been in love with its principles.</p>
+<p>I decided I wanted to learn Clojure, and to try to integrate it into our API platform - if all our microservices were JVM based, who says one couldn&rsquo;t be in Clojure?</p>
+<p>I borrowed the book <strong>Clojure for the Brave and True</strong> from my team lead at the time, who also had pipe dreams of using Clojure for a financial modeling startup.
+Brave Clojure (as I&rsquo;ll call it henceforth) is a great book - it has hearty doses of humor, and is a must read if you&rsquo;re interested in Clojure.
+At the end of the first chapter, the book describes a few different popular IDE options for Clojure - namely, Emacs as well as IntelliJ with the Cursive plugin.
+However, the author is moderatly opinionated, and the second chapter of the book is entirely about configuring and using Emacs.</p>
+<p>I pored over every word in this Emacs chapter - I found it fascinating.
+It was describing a way to configure and use Emacs to achieve a productive programming workflow.
+This is what was lacking on my first Emacs attempt, I had no goal - I tried using Emacs for the sake of using it.</p>
+<p>This chapter does have one issue though, which is that the author provides a zip file of a recommended Emacs configuration.
+This configuration has not aged entirely well (there have been a few packages in the last few years which would clean it up, such as <em>use-package</em>), and will not suit all users.
+Additionally, if it ever breaks, the user will likely be dead in the water on what to do.</p>
+<p>Regardless, I used this configuration and followed every step of the chapter. I also gave the built in tutorial another go, to greater success.
+I was beginning to understand the fluidity of using Emacs, but I still had no knowledge in configuring and tweaking it for my use cases.</p>
+<p>I now felt comfortable with Emacs, but pretty much only for Clojure with the Brave Clojure configuration.
+It felt a bit like having one highly specialized tool in your work belt that you used once a year, if ever.
+I ended up not having too much spare time to work on Clojure, and as a result my Emacs usage dwindled into nothingness.</p>
+<p>What did persist however, were the keybindings.
+I made the decision to swap my IntelliJ keybindings to be the built in Emacs keymap.
+It did a pretty good job mapping navigational keys and common operations to their default Emacs values.
+Quickly, nobody besides me could use my IntelliJ anymore (made more difficult with my keyboard, a HHKB), and I had the muscle memory for navigational keys well developed.</p>
+<h3 id="enlightenment-as-a-primary-ide">enlightenment as a primary IDE<a class="anchor" href="#enlightenment-as-a-primary-ide">#</a></h3>
+<p>Fast forward to the beginning of 2019, and I&rsquo;ve got another new job - my first with an actual <em>software engineer</em> title.
+We now jump to present tense, as this is my current job as of this writing.</p>
+<p>The tech stack at this role is Python on the backend.
+I&rsquo;d hardly worked with Python prior to this role, so in my first month I watched some professional development videos to get up to speed on the language.</p>
+<p>When it came time to choose an IDE, I originally settled with PyCharm.
+It was almost identical to IntelliJ with which I was already familiar, and most of my coworkers were also using PyCharm.</p>
+<p>Over the next few months, a few catalyzing factors lead to me using Emacs exclusively, which we&rsquo;ll go over in detail.</p>
+<h5 id="community">Community</h5>
+<p>While I&rsquo;m the only person at my current role who uses Emacs, I started to meet others who did use it.</p>
+<p>I started showing up a little more regularly to the Emacs NY Meetup, and chatting with other there.</p>
+<p>I started watching more YouTube videos about Emacs topics, which were mostly recorded from previous sessions of the NY meetup which I had begun attending.
+This spurred my interest in some other topics, which I will discuss below, but mainly the videos helped instill that sense of community further.</p>
+<p>I started listening to all the Emacs related podcasts that were available, getting a much better understanding of the ecosystem in the process.
+Emacs is a lot less intimidating when you understand to what names like <em>helm</em>, <em>company</em> and <em>projectile</em> pertain.</p>
+<p>Lastly and most importantly, I discovered my friend Adrien is a pseudo-celebrity in the Emacs community.
+He&rsquo;s distributed packages for managing Kubernetes, Habitica and Todoist from inside Emacs.</p>
+<h5 id="org-mode">Org-Mode</h5>
+<p>I&rsquo;m sure if the the population of new Emacs users from the past ~15 years was surveyed on what made them try Emacs, I&rsquo;m sure Org-Mode would feature prominently as a reason.</p>
+<p>Org-Mode is extremely feature rich and difficult to explain succinctly, but at a high level it is an Emacs major mode that is well suited to note taking, task tracking and outlining.
+Many users manage all aspects of their productive life via org-mode.
+One of the coolest aspects of org-mode is the agenda view, which will consolidate your TODOs and calendar events striped across multiple org files and present them in a daily/weekly view.</p>
+<p>When I discovered org-mode, I was staggered across 3 different apps to manage my work to-do&rsquo;s, personal to-do&rsquo;s, list management, Dungeons and Dragons organization, etc.
+Org-mode was clearly the tool that I wanted and needed, and this pushed me heavily into the full-time Emacs camp.</p>
+<p>As of this writing, I use org-mode primarily for note taking as well as managing personal project coding TODOs. I use an external todo app (Todoist) for all other things. Once I have time to spend on it, I can configure the <a href="https://github.com/abrochard/emacs-todoist">package</a> Adrien wrote to get some Emacs Todoist integration.</p>
+<h5 id="experience">Experience</h5>
+<p>Honestly, I was just in a better position to dive into Emacs at this junction.
+I had gotten more experience wrangling configurations, reading documentation and writing code.</p>
+<p>I don&rsquo;t believe that you need to be a programmer (or otherwise highly technical) to use Emacs effectively.
+That being said, I believe that the experience I gathered in my professional career helped me develop a tinkerer&rsquo;s passion.
+Having this passion fuels my need to endlessly tinker and tweak my Emacs setup, the results of which bring me a lot of joy.</p>
+<h3 id="lets-get-technical-what-packages-were-critical-to-using-emacs-as-the-primary-ide">let&rsquo;s get technical: what packages were critical to using Emacs as the primary IDE?<a class="anchor" href="#lets-get-technical-what-packages-were-critical-to-using-emacs-as-the-primary-ide">#</a></h3>
+<p>For this section, I use the term &ldquo;productivity&rdquo; to refer to my ability to and the ease with which I am able to translate thought into code.</p>
+<p>Before I was willing to commit to Emacs as my primary IDE, I had to ensure that I could at least be close to as productive as I was in my existing tools.</p>
+<p>The first tool that I really needed to do my job in Emacs was a python mode. I settled on <a href="https://github.com/jorgenschaefer/elpy">elpy</a>, as this seemed a common choice.
+Elpy offered the IDE-like experience I needed for Python development. It wasn&rsquo;t quite as feature rich as PyCharm with regards to flexible code navigation and global refactoring (Note: JetBrains global refactoring is black magic), but it certainly helped me get up and running. Elpy also helped me to learn more about the ecosystem - I learned about packages like <a href="https://github.com/company-mode/company-mode">company</a> and <a href="https://github.com/flycheck/flycheck">flycheck</a>.</p>
+<p>Now I was up and running with a Python IDE. However, I was <em>very</em> clunky at navigating around Emacs and my project; I could not switch buffers effectively, and I would consistently find files by exact path (watching me do this was a nightmare, trust me). The next two packages that I really needed were <a href="https://github.com/emacs-helm/helm">Helm</a> and <a href="https://github.com/bbatsov/projectile">Projectile</a>.</p>
+<p>Helm is an incremental search and selection narrowing framework, but it feels like a lot more than that. In the way that I use it, Helm is effectively a tool that, when searching, opens new buffers with results that are easily navigable.</p>
+<p>Projectile is a tool that makes it easy to work with &ldquo;projects&rdquo;. In my context, a project is almost always a git repository. Projectile offers functions to quickly switch between registered projects, find files within a project, find text patterns within a project, etc.</p>
+<p>At this point, I&rsquo;m almost caught up to my original productivity, with the added benefit that I was having a lot of fun as well.</p>
+<p>Out of curiosity, I swapped over from elpy to using <a href="https://github.com/emacs-lsp/lsp-mode">lsp-mode</a>. Once I got it configured, I found it to be snappier and got me closer to that &ldquo;IDE&rdquo; feeling with features like peeking into definitions of functions. I&rsquo;m still at the time of this writing running into occasional issues with lsp-mode - it&rsquo;s pretty bleeding edge at this point, especially if you&rsquo;re using the <a href="https://github.com/palantir/python-language-server">pyls</a>. Some of my issues will be resolved with my primary work codebase completes its python2 -&gt; python3 migration, with the eventual dependency bump.</p>
+<p>Another package that I started leveraging at this point was <a href="https://github.com/joaotavora/yasnippet">yasnippet</a>. This is a legendary package - it&rsquo;s a snippet creator, but it allows embedding arbitrary emacs-lisp code into your templates, so it becomes something much more powerful. I&rsquo;ve still only scratched the surface here. I highly recommend <a href="https://github.com/AndreaCrotti/yasnippet-snippets">this community library</a>.</p>
+<p>The package that has consistently had my coworkers ooh-ing and aah-ing is <a href="https://github.com/pashky/restclient.el">restclient</a>. This makes making HTTP requests <em>very</em> smooth, and has allowed me to almost entirely offboard from Postman.
+Additionally, my friend Adrien is working on a package, <a href="https://github.com/abrochard/walkman">walkman</a>, to do HTTP requests in an org file. With a little more customization, one can get an even more Postman-like experience.</p>
+<p>I still have a ways to go - I still don&rsquo;t have great tools for refactoring, nor have I spent much time sharpening the knife of making my editing more efficient.</p>
+<h3 id="in-summary">in summary<a class="anchor" href="#in-summary">#</a></h3>
+<p>I hope that this was an interesting read for you, and that it maybe sparks an interest in using Emacs yourself - as well as being an efficient tool, it can be a fun hobby.</p>
+<p>Please feel encouraged to reach out to me on any/all social platforms to chat about Emacs.</p>
+
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://wneville.com/tags/emacs/">emacs</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://wneville.com/tags/autobiographical/">autobiographical</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://wneville.com/blog/citizen-cybersecurity/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">A Citizen&#39;s Guide to Cybersecurity</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/wneville"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://wneville.com/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="Twitter"
+         href="https://twitter.com/wneville_"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://wneville.com/svg/twitter.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2020</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>

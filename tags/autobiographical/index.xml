@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Frame Perfect</title>
-    <link>https://wneville.com/</link>
-    <description>Recent content on Frame Perfect</description>
+    <title>autobiographical on Frame Perfect</title>
+    <link>https://wneville.com/tags/autobiographical/</link>
+    <description>Recent content in autobiographical on Frame Perfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
     <lastBuildDate>Wed, 02 Oct 2019 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://wneville.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wneville.com/tags/autobiographical/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,15 +21,6 @@
       <description>init I&amp;rsquo;m rapidly becoming known as &amp;ldquo;that Emacs guy&amp;rdquo; in my office.
 I&amp;rsquo;m very vocal about my love for this ~35 year old piece of software, and (unsuccessfully) evangelize it amongst my peers.
 Whenever one of my coworkers shows the smallest amount of interest in it, such as &amp;ldquo;Hey that presentation you gave with the code blocks, what was that in?&amp;rdquo;, it&amp;rsquo;s off to the races. I&amp;rsquo;m prone to inundate them with additional reading materials and youtube videos about emacs and org-mode and why they should also consider using it to organize their life.</description>
-    </item>
-    
-    <item>
-      <title>A Citizen&#39;s Guide to Cybersecurity</title>
-      <link>https://wneville.com/blog/citizen-cybersecurity/</link>
-      <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://wneville.com/blog/citizen-cybersecurity/</guid>
-      <description>TL;DR - You should use a password manager and two factor authentication. What&amp;rsquo;s the haps, homeslice? Nowadays, an individual&amp;rsquo;s online presence is dictated by many, many accounts. Each account has some primary identifier - typically a username, or more commonly an email address. Additionally, each account has its own password. We&amp;rsquo;ve been taught that these passwords must be secure - combinations of letters, number and symbols that would be difficult for someone to guess.</description>
     </item>
     
   </channel>
