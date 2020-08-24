@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>speedrunning on Frame Perfect</title>
+    <link>https://wneville.com/tags/speedrunning/</link>
+    <description>Recent content in speedrunning on Frame Perfect</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© {year}</copyright>
+    <lastBuildDate>Sun, 23 Aug 2020 11:37:44 -0400</lastBuildDate>
+    
+	<atom:link href="https://wneville.com/tags/speedrunning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Speedrunning: A Dance of Dependencies and Restrictions</title>
+      <link>https://wneville.com/blog/speedrunning-dependencies-restrictions/</link>
+      <pubDate>Sun, 23 Aug 2020 11:37:44 -0400</pubDate>
+      
+      <guid>https://wneville.com/blog/speedrunning-dependencies-restrictions/</guid>
+      <description>Thesis  What does it mean to complete a &amp;#34;speedrun&amp;#34; of a video game? Abstractly, completing a &amp;#34;speedrun&amp;#34; of a game is to satisfy some predetermined set of dependencies as quickly as possible while adhering to a predetermined set of restrictions.
+ This post will explore the nature of these sets of &amp;#34;dependencies&amp;#34; and &amp;#34;restrictions&amp;#34; that the community establishes for their games.
+  The Definition of Completion can be Subjective  Let&amp;#39;s take a step back: what does it mean to beat a game?</description>
+    </item>
+    
+  </channel>
+</rss>

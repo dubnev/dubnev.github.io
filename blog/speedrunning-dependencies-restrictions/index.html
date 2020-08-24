@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Speedrunning: A Dance of Dependencies and Restrictions | Frame Perfect</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="An investigation into the nature of speedrunning video games, using Zelda: Ocarina of Time as a case study.">
+  <meta name="keywords" content="speedrunning , video games , ocarina of time , retro">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Speedrunning: A Dance of Dependencies and Restrictions" />
+  <meta name="twitter:description" content="An investigation into the nature of speedrunning video games, using Zelda: Ocarina of Time as a case study."/>
+  <meta name="twitter:site" content="https://twitter.com/wneville_" />
+  <meta name="twitter:creator" content="https://twitter.com/wneville_" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.2cb93c91050d1853bf971cc31e00122edd6e0f405aa1de3b7f8ef67ea3b5a79a.css" integrity="sha256-LLk8kQUNGFO/lxzDHgASLt1uD0Baod47f472fqO1p5o="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/wneville.com"
+      },
+      "articleSection" : "blog",
+      "name" : "Speedrunning: A Dance of Dependencies and Restrictions",
+      "headline" : "Speedrunning: A Dance of Dependencies and Restrictions",
+      "description" : "An investigation into the nature of speedrunning video games, using Zelda: Ocarina of Time as a case study.",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-08-23 11:37:44 -0400 EDT",
+      "dateModified" : "2020-08-23 11:37:44 -0400 EDT",
+      "url" : "https:\/\/wneville.com\/blog\/speedrunning-dependencies-restrictions\/",
+      "wordCount" : "2713",
+      "keywords" : ["speedrunning", "video games", "ocarina of time", "retro", "Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Speedrunning: A Dance of Dependencies and Restrictions</h1>
+            <time datetime="2020-08-23 11:37:44 -0400 EDT" class="post__date">Aug 23 2020</time> 
+          </header>
+          <article class="post__content">
+              
+
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Thesis
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>What does it mean to complete a &#34;speedrun&#34; of a video game?
+Abstractly, completing a &#34;speedrun&#34; of a game is to satisfy some predetermined set of dependencies as quickly as possible while adhering to a predetermined set of restrictions.</p>
+<p>
+This post will explore the nature of these sets of &#34;dependencies&#34; and &#34;restrictions&#34; that the community establishes for their games.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+The Definition of Completion can be Subjective
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>Let&#39;s take a step back: what does it mean to beat a game?</p>
+<p>
+This is subjective, but an attempted casual answer to this question might look like this: <em><strong>&#34;Progress through the game&#39;s story, complete all the levels, and defeat the final boss.&#34;</strong></em></p>
+<p>
+The game presents challenges to the player, and when the player completes these challenges they emerge triumphant: they have &#34;beaten&#34; the game. The credits roll, a virtual world is saved (maybe) and they are left with a sense of accomplishment.</p>
+<p>
+However, the player could reload their save file and explore all remaining nooks and crannies in the game - maybe the game even has a meter that display a completion percentage, and the player could continue until that displays <em>100%</em>.
+This is another form of completion that one might call <em>full completion</em>.</p>
+<p>
+In the speedrunning world, each game&#39;s community will typically define at what point the game is considered beaten or completed.
+Throughout the rest of this post, this community defined point will be referred to as the <em><strong>definition of completion</strong></em>, or <em><strong>DoC</strong></em> for brevity. </p>
+<p>
+Let&#39;s consider two examples where our DoC is to defeat the game&#39;s final boss:</p>
+<ul>
+<li>
+<p>What if the game this game was non-linear, and didn&#39;t require the player to visit all areas of the game and &#34;consume&#34; all of the content within prior to confronting the final boss?
+The player would probably try to visit every required area as quickly as possible, gather all required items/skills, and confront the final boss as early as is possible.</p>
+</li>
+<li>
+<p>Now, what if the game <span style="text-decoration: underline;">was</span> linear, but the player learned of a way to bypass an area that was intended to be required, and end up confronting the final boss earlier than would have otherwise been possible?
+In essence, the only difference between this and the previous example is that the number of areas the player is required to visit is reduced by one.
+However, how the player is playing the game is now inherently different. They are no longer playing by the game&#39;s rules - they are executing an action that the developers (probably) did not intend for the player to do.</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Dependencies
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>Let&#39;s abstract this concept of required &#34;things&#34; the player has to do to beat the game to be a <em><strong>dependency</strong></em>.</p>
+<p>
+A <em>dependency</em> is something that the player must satisfy in order to achieve their DoC.
+Examples of common dependencies one finds in games are completing a level, collecting an item, and reading specific character dialogues.</p>
+<p>
+To satisfy the definition of beating the game in the lowest amount of time possible, the player has two key ways of saving time: </p>
+<ol>
+<li>
+<p>Improving their own gameplay and consistency through practice</p>
+</li>
+<li>
+<p>Finding ways of reducing dependencies so that they have overall less game to play.</p>
+</li>
+</ol>
+<p>There is a certain irony in the fact that the most passionate fans of a game spend countless hours discovering and applying new ways of <span style="text-decoration: underline;">reducing</span> the amount of the game they have to play.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+As time passes…
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>The longer a game sticks around, the more things players will discover that allow them to reduce dependencies.
+Players find ways of tricking the game into warping the player to late in the game or giving the player key items outside of the expected source.</p>
+<p>
+Eventually, a game may reach a state with some of the following issues:</p>
+<ul>
+<li>
+<p>The number of dependencies to beat the game may be a fraction of what it used to be - multi-hour games may be reduced to an hour or two (or in our upcoming case study, less than 10 minutes).</p>
+</li>
+<li>
+<p>The techniques discovered that allow players to bypass large segments of the game may be technically very difficult, or inconsistent leading to them being &#34;not fun&#34;.</p>
+</li>
+<li>
+<p>The player population may have pushed their skill level to such a point that, barring the discovery of new ways to reduce dependencies even further, faster times become very unlikely barring absolute perfection of gameplay.</p>
+</li>
+</ul>
+<p>To keep the game fresh and fun, community members may experiment with applying limitations on themselves to reduce the available actions they can perform to bypass dependencies.
+Doing so changes how the player must play the game, as the fastest sequence of actions they could take to satisfy the DoC will depend on what options are available to them.</p>
+<p>
+Thus enters the concept of <em><strong>restrictions</strong></em>.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Restrictions
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>A <em>restriction</em> is something that the player is <span style="text-decoration: underline;">not</span> allowed to do in their pursuit of satisfying the DoC.</p>
+<p>
+Restrictions are often placed in order to modify the <em><strong>route</strong></em> (ordered sequence of actions) that the player takes to satisfy the DoC as quickly as possible.</p>
+<p>
+Alternatively, restrictions may be put into place to ensure fairness across the player base.
+For example, if a version of the game that had a very limited print run (and is thus expensive to acquire second hand) is shown to be substantially faster due to a version exclusive trick, the community may opt to ban this trick to keep the fastest times from being cost prohibitive.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+Theoretical Example of Applying Restrictions and/or Dependencies for Route Variety
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>Here&#39;s a theoretical example: there exists a game where one must go collect three magic flowers from dungeons in order to open a door immediately behind which lies the final boss fight.
+The community defines the DoC as <em><strong>&#34;Defeating the final boss.&#34;</strong></em></p>
+<p>
+The boss door is located very near to where the player begins the game.
+It is discovered over time that there is a load trigger (some portion of 3D space that, when touched by the player character, will load a different portion of the game and teleport the character there) that is always loaded behind the door.
+If the player were able to make their character touch this load trigger, they would enter the boss fight regardless of how many magic flower they have collected.
+Naturally, a technique is eventually discovered that allows players to consistently touch the load trigger without opening the door by exploiting a glitch to clip (i.e. pass through something solid) through the door.
+With this technique in hand, players now have the ability to confront the final boss almost instantly after starting a new game; this bypasses almost the entirety of the game&#39;s content.</p>
+<p>
+While this door clip may enable the fastest known way to defeat the final boss, this may not be the experience that the player wants to do over and over while they work on improving their time.
+In this case, some players may choose to apply a restriction of disallowing glitches that allow clipping.
+Adhering to this restriction would form a new route, as the player would once again be forced to go collect the three magic flowers in order to open the door via the &#34;intended&#34; means.</p>
+<p>
+Alternatively, players might consider the glitch that enables the clip <span style="text-decoration: underline;">not</span> to be the part of the route they take issue with; maybe the glitch is fun to execute or opens up possibilities in how to approach obstacles in the game.
+In this case, players might instead opt to include an additional dependency in their DoC, such that it reads as <em><strong>&#34;Collect all three magic flowers then defeat the final boss.&#34;</strong></em></p>
+<p>
+The difference between disallowing the clip glitch altogether rather than requiring the player collect all the magic flowers is that, in the latter case, the player is free to utilize the clip glitch to make the collection of the magic flowers a faster endeavor.
+Even better, if there is a long cutscene that the player would need to watch of their character presenting the flowers to open the boss door, it may be faster for the player to clip past the door after collecting the flowers anyway!</p>
+<p>
+Assuming the route that player takes to satisfy the DoC in either case is entertaining, other players may become interested in running it.
+This creates the need for a named grouping of dependencies and/or restrictions.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Categories
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<p>A speedrun <em><strong>category</strong></em> for a game is a named grouping of dependencies and/or restrictions.
+Dependencies will often be abstracted as a high level DoC (e.g. &#34;Collect all three magic flowers then defeat the final boss&#34;), whereas the restrictions will often be a list of banned techniques or categories of techniques.</p>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+Case Study - Zelda: Ocarina of Time
+</h2>
+<div id="outline-text-headline-8" class="outline-text-2">
+<p>All information in this case study is current as of August 23rd, 2020. It will eventually become outdated thanks to the beautiful dynamism of speedrunning.</p>
+<div id="outline-container-headline-9" class="outline-3">
+<h3 id="headline-9">
+The Intended Path
+</h3>
+<div id="outline-text-headline-9" class="outline-text-3">
+<p>Considering an &#34;intended&#34; DoC of <em><strong>&#34;Defeat the final boss.&#34;</strong></em>, the following details a <em><strong>very high level overview</strong></em> of the actions (without the story context) the player is meant to take in order to satisfy the DoC.
+Navi, the player&#39;s fairy companion, will periodically hint the player of where they should go next and takes them on this path.
+If you&#39;ve played Zelda: Ocarina of Time before, you can probably skip this section.</p>
+<ol>
+<li>
+<p>Collect Sword and Shield in Kokiri Forest, beat Deku Tree, collect Kokiri Emerald.</p>
+</li>
+<li>
+<p>Get Zelda&#39;s Letter and Zelda&#39;s Lullaby, go up Death Mountain to Goron City. Go back into Kokiri Forest to learn Saria&#39;s Song, play it to Darunia to get Goron Bracelet.</p>
+</li>
+<li>
+<p>Use Goron Bracelet to throw Bomb Flower to open Dodongo&#39;s Cavern. Beat Dodongo&#39;s Cavern, collect Goron Ruby.</p>
+</li>
+<li>
+<p>Go up Zora&#39;s River to Zora&#39;s Domain, win Silver Scale from Diving Game. Dive to Ruto&#39;s Letter in Lake Hylia, present to King Zora (mweep).</p>
+</li>
+<li>
+<p>Present fish to Jabu Jabu, enter belly. Beat Jabu Jabu&#39;s Belly, collect Zora Sapphire.</p>
+</li>
+<li>
+<p>Go back to Hyrule Castle, get Ocarina of Time from Zelda fleeing the castle on horseback.</p>
+</li>
+<li>
+<p>Open Door of Time using Ocarina of Time + Spiritual Stones, pull Master Sword, become adult. Collect Light Medallion.</p>
+</li>
+<li>
+<p>Go to Kakariko graveyard, get Hookshot and Song of Storms.</p>
+</li>
+<li>
+<p>Use Hookshot to enter Forest Temple, beat Forest Temple, get Forest Medallion.</p>
+</li>
+<li>
+<p>Stop rolling Goron in Goron City to open doors and get Goron Tunic.</p>
+</li>
+<li>
+<p>Hookshot over bridge to access Fire Temple entrance. Beat Fire Temple, get Fire Medallion.</p>
+</li>
+<li>
+<p>Go to Ice Cavern in Zora&#39;s Fountain, get to the end to collect Iron Boots.</p>
+</li>
+<li>
+<p>Use Iron Boots and Hookshot to enter Water Temple. Beat Water Temple, get Water Medallion.</p>
+</li>
+<li>
+<p>Go back to child, get Din&#39;s Fire. Use Song of Storms to drain Well in Kakariko, collect Lens of Truth from Bottom of the Well. Go back to adult.</p>
+</li>
+<li>
+<p>Use Din&#39;s Fire to enter Shadow Temple. Beat Shadow Temple, get Shadow Medallion.</p>
+</li>
+<li>
+<p>Enter Gerudo Fortress, free four carpenters to get the Gerudo Card. Open gate to Haunted Wasteland.</p>
+</li>
+<li>
+<p>Use Lens to cross Haunted Wasteland. Enter Spirit Temple, realize you can&#39;t do anything, leave to collect Requiem of Spirit.</p>
+</li>
+<li>
+<p>Go back to child, play Requiem of Spirit. Proceed through Spirit Temple until Silver Gauntlets collected.</p>
+</li>
+<li>
+<p>Go back to adult, play Requiem of Spirit, beat Spirit Temple. Get Spirit Medallion.</p>
+</li>
+<li>
+<p>Go to Ganon&#39;s Castle, cross bridge that appears upon having all six Medallions.</p>
+</li>
+<li>
+<p>Complete the six trials in Ganon&#39;s Castle to dispel the barrier blocking the way to Ganon&#39;s Tower.</p>
+</li>
+<li>
+<p>Climb Ganon&#39;s Tower, defeat Ganondorf. Escape as castle collapses.</p>
+</li>
+<li>
+<p>Investigate strange noise in rubble to initiate Ganon fight. Defeat Ganon, stab it in the face, game beaten.</p>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-3">
+<h3 id="headline-10">
+Category Analyses
+</h3>
+<div id="outline-text-headline-10" class="outline-text-3">
+<p>
+Not all categories will be summarized here, only ones that showcase variety in combinations of dependencies and/or restrictions.</p>
+<p>
+The core DoC for OoT is as follows:</p>
+<ul>
+<li>
+<p><em><strong>If defeating Ganon, time ends on the first frame of the final blow cutscene.</strong></em></p>
+</li>
+<li>
+<p><em><strong>If wrong warping into the credits, timing ends on the first frame of the fade-in of any cutscene which normally takes place after the Ganon final slash, and which will eventually reach The End screen.</strong></em></p>
+</li>
+</ul>
+<p>All additional dependencies added into categories are listed separately and are considered required in addition to either of the above.</p>
+<p>
+Many categories have been split into <code class="verbatim">SRM</code> and <code class="verbatim">No SRM</code> variants after the discovery of this glitch, due to the fundamentally route changing nature of it. The variant being analyzed will be noted.</p>
+<div id="outline-container-headline-11" class="outline-4">
+<h4 id="headline-11">
+Any%
+</h4>
+<div id="outline-text-headline-11" class="outline-text-4">
+<div id="outline-container-headline-12" class="outline-5">
+<h5 id="headline-12">
+Summary
+</h5>
+<div id="outline-text-headline-12" class="outline-text-5">
+<p>Player manipulates in game memory to perform an exploit known as ACE (Arbitrary Code Execution), allowing them to warp to end credits from Kokiri Forest.</p>
+<p>
+Satisfies the wrong warp DoC.</p>
+<p>
+Record as of 8/23/2020: <a href="https://www.speedrun.com/oot/run/ylkwr3xz">7m 32s 833ms by Savestate</a></p>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-5">
+<h5 id="headline-13">
+Dependencies
+</h5>
+<div id="outline-text-headline-13" class="outline-text-5">
+<p>N/A, WW DoC</p>
+</div>
+</div>
+<div id="outline-container-headline-14" class="outline-5">
+<h5 id="headline-14">
+Restrictions
+</h5>
+<div id="outline-text-headline-14" class="outline-text-5">
+<p>N/A</p>
+</div>
+</div>
+<div id="outline-container-headline-15" class="outline-5">
+<h5 id="headline-15">
+Notable Techniques
+</h5>
+<div id="outline-text-headline-15" class="outline-text-5">
+<ul>
+<li>
+<p>ACE</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-16" class="outline-4">
+<h4 id="headline-16">
+100% (SRM)
+</h4>
+<div id="outline-text-headline-16" class="outline-text-4">
+<div id="outline-container-headline-17" class="outline-5">
+<h5 id="headline-17">
+Summary
+</h5>
+<div id="outline-text-headline-17" class="outline-text-5">
+<p>Player must achieve 100% completion in the game before defeating Ganon.</p>
+<p>
+Utilizes a huge range of different techniques - the fastest route is nothing remotely close to the intended path through the game.</p>
+<p>
+Record as of 8/23/2020: <a href="https://www.speedrun.com/oot/run/zx2gwjem">3h 38m 01s by zfg</a></p>
+</div>
+</div>
+<div id="outline-container-headline-18" class="outline-5">
+<h5 id="headline-18">
+Dependencies
+</h5>
+<div id="outline-text-headline-18" class="outline-text-5">
+<p><a href="https://docs.google.com/spreadsheets/d/1PqqpZs_wRDmMeTdtFCdiNNhC4qIB0_PncwH7Uzdhlh0/edit#gid=0">Requirements for 100% completion</a></p>
+</div>
+</div>
+<div id="outline-container-headline-19" class="outline-5">
+<h5 id="headline-19">
+Restrictions
+</h5>
+<div id="outline-text-headline-19" class="outline-text-5">
+<ul>
+<li>
+<p>ACE is banned.</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-20" class="outline-5">
+<h5 id="headline-20">
+Notable Techniques
+</h5>
+<div id="outline-text-headline-20" class="outline-text-5">
+<p>Leverages just about every known useful glitch (barring ACE) in Ocarina of Time to go faster, but makes extensive use of SRM.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-21" class="outline-4">
+<h4 id="headline-21">
+Defeat Ganon (No SRM)
+</h4>
+<div id="outline-text-headline-21" class="outline-text-4">
+<div id="outline-container-headline-22" class="outline-5">
+<h5 id="headline-22">
+Summary
+</h5>
+<div id="outline-text-headline-22" class="outline-text-5">
+<p>Players must complete the &#34;Defeat Ganon&#34; core DoC with only minimal restrictions.</p>
+<p>
+Record as of 8/23/2020: <a href="https://www.speedrun.com/oot/run/m35ow66y">16m 49s 366ms by RichardSage</a></p>
+</div>
+</div>
+<div id="outline-container-headline-23" class="outline-5">
+<h5 id="headline-23">
+Dependencies
+</h5>
+<div id="outline-text-headline-23" class="outline-text-5">
+<p>N/A, Defeat Ganon DoC</p>
+</div>
+</div>
+<div id="outline-container-headline-24" class="outline-5">
+<h5 id="headline-24">
+Restrictions
+</h5>
+<div id="outline-text-headline-24" class="outline-text-5">
+<ul>
+<li>
+<p>SRM and ACE are banned.</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-25" class="outline-5">
+<h5 id="headline-25">
+Notable Techniques
+</h5>
+<div id="outline-text-headline-25" class="outline-text-5">
+<ul>
+<li>
+<p>GIM to get bottle in Deku Tree.</p>
+</li>
+<li>
+<p>Ganondoor to wrong warp to collapse sequence</p>
+</li>
+<li>
+<p>HESS off falling rock to skip majority of collapse.</p>
+</li>
+<li>
+<p>ISG with Deku Stick to damage Ganon.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-26" class="outline-4">
+<h4 id="headline-26">
+GSR (Ganondorf Source Requirements)
+</h4>
+<div id="outline-text-headline-26" class="outline-text-4">
+<div id="outline-container-headline-27" class="outline-5">
+<h5 id="headline-27">
+Summary
+</h5>
+<div id="outline-text-headline-27" class="outline-text-5">
+<p>Players must satisfy the core &#34;Defeat Ganon&#34; DoC after collecting the required items from source necessary to defeat Ganondorf prior to initiating the final fight.</p>
+<p>
+Light Arrows are required to stun Ganondorf in the fight.
+Light Arrows are acquired from a cutscene that should require owning all medallions - however, the game only checks for the Shadow and Spirit medallions, so those are the only ones required.</p>
+<p>
+Magic is required to shoot Light Arrows.
+Magic is acquired by playing Zelda&#39;s Lullaby at the fairy fountain at the top of Death Mountain.</p>
+<p>
+A quiver is also required to shoot Light Arrows.
+The quiver is acquired by collecting the Fairy Bow from Forest Temple.</p>
+<p>
+All forms of wrong warping, item manipulation and cut scene skips are disallowed.</p>
+<p>
+Record as of 8/23/2020: <a href="https://www.speedrun.com/oot/run/zqw7rv1z">1h 13m 31s by CountLG</a></p>
+</div>
+</div>
+<div id="outline-container-headline-28" class="outline-5">
+<h5 id="headline-28">
+Dependencies
+</h5>
+<div id="outline-text-headline-28" class="outline-text-5">
+<p>Defeat Ganon DoC with following additional dependencies:</p>
+<ul>
+<li>
+<p>Defeat Ganondorf</p>
+</li>
+<li>
+<p>Get Light Arrows</p>
+<ul>
+<li>
+<p>Collect Shadow and Spirit Medallions</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Get magic</p>
+<ul>
+<li>
+<p>Get Zelda&#39;s Lullaby</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Get Quiver 30</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-29" class="outline-5">
+<h5 id="headline-29">
+Restrictions
+</h5>
+<div id="outline-text-headline-29" class="outline-text-5">
+<ul>
+<li>
+<p>Wrong Warping is banned.</p>
+</li>
+<li>
+<p>RBA / BA / GIM are banned.</p>
+</li>
+<li>
+<p>SRM and ACE are banned.</p>
+</li>
+<li>
+<p>Cutscene skips from blue warps banned.</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-30" class="outline-5">
+<h5 id="headline-30">
+Notable Techniques
+</h5>
+<div id="outline-text-headline-30" class="outline-text-5">
+<ul>
+<li>
+<p>WESS Escape, Pokey Escape or Walking-While-Talking to leave Kokiri Forest without beating Deku Tree.</p>
+</li>
+<li>
+<p>Cucco or Navi dive to get to Bottom of the Well without draining the water.</p>
+</li>
+<li>
+<p>Blank A or Ocarina Dive to get to Bombchu chest in Bottom of the Well.</p>
+</li>
+<li>
+<p>Damage boosting to get over Hyrule Castle Moat.</p>
+</li>
+<li>
+<p>Dying on same frame as cutscene starting to get Zelda&#39;s Lullaby without watching cutscene.</p>
+</li>
+<li>
+<p>DoT skip to bypass all requirements of opening Door of Time.</p>
+</li>
+<li>
+<p>Hookshot jump to enter Shadow Temple early.</p>
+</li>
+<li>
+<p>Boat(key) skip to go directly to Bongo Bongo fight.</p>
+</li>
+<li>
+<p>Damage Clip to bypass Gerudo Gate.</p>
+</li>
+<li>
+<p>Spirit Hover up to Mirror Shield to bypass normal Spirit Temple progression.</p>
+</li>
+<li>
+<p>Statue Climb + Ground Clip or Head Skip to bypass Spirit Temple boss key.</p>
+</li>
+<li>
+<p>Hover Boost to courtyard ledge in Forest Temple.</p>
+</li>
+<li>
+<p>Ground Jumps + Impossible Jump to bypass strength requirement to move blocks in Forest Temple.</p>
+</li>
+<li>
+<p>Trials Skip to bypass doing any trials in Ganon&#39;s Castle.</p>
+</li>
+<li>
+<p>Collapse Skip to bypass majority of escape sequence after Ganondorf.</p>
+</li>
+<li>
+<p>Superslide into Ganon fight trigger to keep Master Sword.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-31" class="outline-4">
+<h4 id="headline-31">
+Glitchless (Any% Restricted)
+</h4>
+<div id="outline-text-headline-31" class="outline-text-4">
+<div id="outline-container-headline-32" class="outline-5">
+<h5 id="headline-32">
+Summary
+</h5>
+<div id="outline-text-headline-32" class="outline-text-5">
+<p>Players must satisfy the normal &#34;Defeat Ganon&#34; DoC while adhering to a comprehensive set of restrictions on allowed techniques.</p>
+<p>
+The category is defined by movement optimizations rather than big &#34;make or break the run&#34; tricks.</p>
+<p>
+Record as of 8/23/2020: <a href="https://www.speedrun.com/oot/run/yw8jqo9y">3h 40m 36s by ChefBear</a></p>
+</div>
+</div>
+<div id="outline-container-headline-33" class="outline-5">
+<h5 id="headline-33">
+Dependencies
+</h5>
+<div id="outline-text-headline-33" class="outline-text-5">
+<p>N/A, Defeat Ganon DoC</p>
+</div>
+</div>
+<div id="outline-container-headline-34" class="outline-5">
+<h5 id="headline-34">
+Restrictions
+</h5>
+<div id="outline-text-headline-34" class="outline-text-5">
+<p>Please see the <a href="https://www.speedrun.com/oot#Glitchless">official category rules</a> for the full detailed list of allowed and disallowed techniques.</p>
+</div>
+</div>
+<div id="outline-container-headline-35" class="outline-5">
+<h5 id="headline-35">
+Notable Techniques
+</h5>
+<div id="outline-text-headline-35" class="outline-text-5">
+<p>Many unique movement optimizations and &#34;parkour&#34; jumps that are unique to the category.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-36" class="outline-3">
+<h3 id="headline-36">
+Further Reading/Viewing
+</h3>
+<div id="outline-text-headline-36" class="outline-text-3">
+<div id="outline-container-headline-37" class="outline-4">
+<h4 id="headline-37">
+<a href="https://www.youtube.com/watch?v=SPi_d0zhNFc">Fig&#39;s overview of SRM, ACE and beyond</a>
+</h4>
+</div>
+<div id="outline-container-headline-38" class="outline-4">
+<h4 id="headline-38">
+<a href="https://www.youtube.com/watch?v=2ebZ94KGlVw">dannyB&#39;s overview of the evolution of the Glitchless category</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://wneville.com/tags/speedrunning/">speedrunning</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://wneville.com/blog/my-emacs-journey/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">My Ongoing Journey with Emacs</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/wneville"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://wneville.com/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="Twitter"
+         href="https://twitter.com/wneville_"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://wneville.com/svg/twitter.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2020</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
