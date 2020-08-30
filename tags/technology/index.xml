@@ -7,18 +7,137 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="https://wneville.com/tags/technology/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://wneville.com/tags/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Citizen&#39;s Guide to Cybersecurity</title>
       <link>https://wneville.com/blog/citizen-cybersecurity/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://wneville.com/blog/citizen-cybersecurity/</guid>
-      <description>TL;DR - You should use a password manager and two factor authentication. What&amp;rsquo;s the haps, homeslice? Nowadays, an individual&amp;rsquo;s online presence is dictated by many, many accounts. Each account has some primary identifier - typically a username, or more commonly an email address. Additionally, each account has its own password. We&amp;rsquo;ve been taught that these passwords must be secure - combinations of letters, number and symbols that would be difficult for someone to guess.</description>
+      <description>&lt;h2 id=&#34;tldr---you-should-use-a-password-manager-and-two-factor-authentication&#34;&gt;TL;DR - You should use a password manager and two factor authentication.&lt;/h2&gt;
+&lt;h2 id=&#34;whats-the-haps-homeslice&#34;&gt;What&amp;rsquo;s the haps, homeslice?&lt;/h2&gt;
+&lt;p&gt;Nowadays, an individual&amp;rsquo;s online presence is dictated by many, many accounts.
+Each account has some primary identifier - typically a username, or more commonly an email address.
+Additionally, each account has its own password.
+We&amp;rsquo;ve been taught that these passwords must be &lt;em&gt;secure&lt;/em&gt; - combinations of letters, number and symbols that would be difficult for someone to guess.&lt;/p&gt;
+&lt;p&gt;Relevant XKCD
+&lt;img src=&#34;https://imgs.xkcd.com/comics/password_strength.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It is not reasonable for most people to remember dozens to hundreds of unique passwords, especially if the passwords themselves are designed to be difficult to remember.
+As a result, passwords invevitably get &lt;em&gt;re-used&lt;/em&gt; across accounts.
+Inherently, this isn&amp;rsquo;t an issue, right? Only you know the password.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wrong.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO insert links to articles about breaches&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You should assume that a malicious third party will get access to one or more of your online accounts from breaches.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve been using the same email for various services, as well as re-using the same password, then you have an issue.
+The attacker compromised one site, but got access to many of your accounts.&lt;/p&gt;
+&lt;p&gt;Diversifying the email address you use for each web account is not practical, especially given that each email account would have its own password. Thus, it&amp;rsquo;s much better to make sure every password you use is distinct.&lt;/p&gt;
+&lt;p&gt;How can we achieve this?&lt;/p&gt;
+&lt;h2 id=&#34;diversifying-your-passwords&#34;&gt;Diversifying your passwords&lt;/h2&gt;
+&lt;h3 id=&#34;cipher&#34;&gt;Cipher&lt;/h3&gt;
+&lt;p&gt;One option is to create a &lt;em&gt;cipher&lt;/em&gt; - a pattern to generate passwords on a per site basis.&lt;/p&gt;
+&lt;p&gt;As a case study, let&amp;rsquo;s create a Pokemon cipher to manage our passwords.&lt;/p&gt;
+&lt;p&gt;Our key will be the domain of the service - for example, &amp;ldquo;facebook.com&amp;rdquo;.
+Our password formula could be as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;password = 
+    First pokemon whose name starts with first letter of domain 
+    + number of letters in domain 
+    + &amp;quot;!&amp;quot; if domain length is even, else &amp;quot;?&amp;quot; 
+    + First pokemon whose name starts with last letter of domain
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &amp;ldquo;facebook.com&amp;rdquo; as an example, the first pokemon whose name starts with F is &amp;ldquo;Fearow&amp;rdquo;, the domain has 8 letters in it, and the first pokemon whose name starts with &amp;ldquo;k&amp;rdquo; is &amp;ldquo;Kadabra&amp;rdquo;, so our password would be: &lt;code&gt;Fearow8!Kadabra&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This approach would generally give us a unique password for each service, unless the domains have a common first letter, last letter and length.&lt;/p&gt;
+&lt;p&gt;The first problem of this approach is that everyone I&amp;rsquo;ve spoken to who uses a cipher to encode their passwords &lt;em&gt;loves&lt;/em&gt; to talk about how they use a cipher to encode their passwords.
+This is tongue and cheek, but don&amp;rsquo;t share your security implementation details ;)&lt;/p&gt;
+&lt;p&gt;The real problem with this approach is that you&amp;rsquo;re introducing a &lt;em&gt;pattern&lt;/em&gt; into your passwords.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say that a few of your passwords using this structure get compromised in large scale breaches.
+The compromised data that exists on the web looks like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;facebook Fearow8!Kadabra
+twitter Tentacool7?Rattata
+instagram Ivysaur9?Metapod
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Uh oh. All of a sudden, that cipher doesn&amp;rsquo;t seem so secure anymore - anybody who notices the pattern and determines your cipher formula has gained access to &lt;em&gt;all of your passwords&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;There are methods you could take you try to make your cipher more robust and &amp;ldquo;uncrackable&amp;rdquo;, but the bad news is that anything &lt;em&gt;you&lt;/em&gt; design will inherently be crackable.&lt;/p&gt;
+&lt;p&gt;Well, what if you didn&amp;rsquo;t know any of your own passwords?&lt;/p&gt;
+&lt;h2 id=&#34;password-manager&#34;&gt;Password Manager&lt;/h2&gt;
+&lt;p&gt;A &lt;em&gt;password manager&lt;/em&gt; is a piece of software you can use to store all of your passwords.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ALARM BELLS, car tires screeching, screams in the distance&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Wait, you want me to put all of my passwords into one location? That seems &lt;em&gt;wildly&lt;/em&gt; insecure. What happens if an attacker gets access to that?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Hear me out, I promise that this is actually the most secure way you could manage your passwords as an average tech savvy citizen.&lt;/p&gt;
+&lt;h4 id=&#34;the-value&#34;&gt;The Value&lt;/h4&gt;
+&lt;p&gt;Using a password manager, you can generate random passwords for every account you create. When you visit those websites, rather than typing in the password manually, you can
+paste it directly from the password manager.&lt;/p&gt;
+&lt;p&gt;What a win, right? Our password diversification problem is solved - we have a unique password per service, so if any of those become compromised, you can sleep at night knowing that none of your &lt;em&gt;other&lt;/em&gt; accounts have been compromised.&lt;/p&gt;
+&lt;p&gt;The downside of this approach is that additional mental load is added when trying to log onto a service, especially on mobile. When prompted for a password, you must switch to your manager, enter the password for that, traverse to the account password you need, copy it, switch back to the site, and paste it in. I hear you, that&amp;rsquo;s a pain, but it&amp;rsquo;s a worthy tradeoff.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s talk about the elephant in the room: &lt;em&gt;the one password to rule them all&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;master-password-security&#34;&gt;Master Password Security&lt;/h4&gt;
+&lt;p&gt;Scroll back up and take a look at that xkcd comic again.&lt;/p&gt;
+&lt;p&gt;To summarize, this password should be something difficult for a computer to guess, but very easy for you to remember.
+It should be long and have &lt;em&gt;some&lt;/em&gt; combination of different types of characters.
+Additionally, your master password should &lt;em&gt;not be relateable to you at all&lt;/em&gt;. Please do not include your pet&amp;rsquo;s names in this password.&lt;/p&gt;
+&lt;p&gt;So, how do you generate a secure master password?&lt;/p&gt;
+&lt;p&gt;One way is to say a sentence that nobody has said before.&lt;/p&gt;
+&lt;p&gt;For example, I could say &amp;ldquo;The rainbow zombies are raiding Antarctica!&amp;rdquo;, and get a perfectly reasonable password of &lt;code&gt;rainbow.zombies.raiding.Antarctica&lt;/code&gt;.
+For even more security, add in a few numbers or special characters that you can remember - something like &lt;code&gt;rainbow.zombies?raiding.Antarctia!42&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, I&amp;rsquo;m no expert on entropy, but this is long and arbitrary enough that no brute force script would stumble into it.&lt;/p&gt;
+&lt;h4 id=&#34;but-isnt-it-risky-to-keep-my-vault-in-the-cloud&#34;&gt;But isn&amp;rsquo;t it risky to keep my vault in the cloud?&lt;/h4&gt;
+&lt;p&gt;No, assuming you&amp;rsquo;re using any well respected and established password manager.&lt;/p&gt;
+&lt;p&gt;The place where you are storing your passwords is your &lt;em&gt;password vault&lt;/em&gt;. Think of this as a locked box.
+When you first boot up your password manager and are prompted for your master password, all you have is a locked box.
+When you enter your master password, it unlocks the box and you are able to access all your passwords.&lt;/p&gt;
+&lt;p&gt;Your master password is the &lt;em&gt;key&lt;/em&gt; to your vault.
+The company which has created the password manager is storing only your vault in the cloud.
+The password management company &lt;em&gt;does not have access to your master password in any form&lt;/em&gt;. Only you have the key to open that box.
+So, if some very talented hackers did manage to get access to some vaults (it has happened in the past), they wouldn&amp;rsquo;t have access to your passwords, only a locked box.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve followed the guide above and created a sufficiently secure master password that can&amp;rsquo;t be guessed by social engineering, you have no real risk keeping your vault in the cloud.&lt;/p&gt;
+&lt;h4 id=&#34;okay-youve-sold-me---now-what-password-manager-should-i-actually-use&#34;&gt;Okay, you&amp;rsquo;ve sold me - now what password manager should I actually use?&lt;/h4&gt;
+&lt;p&gt;There are plenty of good password managers on the market these days - you should balance price and useability.&lt;/p&gt;
+&lt;p&gt;The following are all fine options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lastpass&lt;/li&gt;
+&lt;li&gt;1Password&lt;/li&gt;
+&lt;li&gt;Dashlane&lt;/li&gt;
+&lt;li&gt;Roboform&lt;/li&gt;
+&lt;li&gt;Keepass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Personally, I use Dashlane. It&amp;rsquo;s one of the more expensive options, but I enjoy their UI and emergency contact recovery features. They also have excellent sharing facilities.&lt;/p&gt;
+&lt;p&gt;Generally, I would suggest people go with Lastpass. It&amp;rsquo;s free, and excellent for what it is.
+Initially I was skeptical about it being free (&amp;ldquo;No such thing as a free lunch, what are they getting from me?&amp;quot;), but their business model appears to be based around their enterprise solution.
+Emphatic users of a free password manager are likely to suggest the enterprise offering to their businesses.&lt;/p&gt;
+&lt;h2 id=&#34;but-wait-theres-more&#34;&gt;But wait, there&amp;rsquo;s more!&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s back up for a second.
+I said something really scary earlier, and it&amp;rsquo;s critical to this next section.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;You should assume that a malicious third party will get access to one or more of your online accounts from breaches.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;What?! It&amp;rsquo;s all well and good that when an account gets compromised it won&amp;rsquo;t potentially compromise my other accounts, but what about the accounts that &lt;strong&gt;we cannot let get compromised?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Accounts that would be destructive if compromised (e.g. online banking), or accounts that manage access to other accounts (email), must not be compromised.&lt;/p&gt;
+&lt;p&gt;Modern security is based on three aspects: something you know, something you have, and something you are.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s hand wave the &amp;ldquo;something you are&amp;rdquo;, because that&amp;rsquo;s not really a commercially available option yet.
+Think biometric data, such as fingerprints. Imagine a future where only you are allowed to unlock your phone, and it knows it&amp;rsquo;s you by analyzing the DNA of the skin touching it. The future will be wild.&lt;/p&gt;
+&lt;p&gt;Something you know would be a password. This is what we must assume is not secure; because the &amp;ldquo;thing we know&amp;rdquo; must be stored elsewhere for web accounts, it is liable to be leaked.
+It&amp;rsquo;s interesting to breakdown a password as actually being &amp;ldquo;a thing I said I knew at the time of registration, and that future me will also know&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;That just leaves &amp;ldquo;something you have&amp;rdquo;. The combination of requiring something you know and something you have is referred to as &lt;em&gt;two factor authentication&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So, let&amp;rsquo;s configure something you (and only you) have.&lt;/p&gt;
+&lt;h2 id=&#34;two-factor-authentication&#34;&gt;Two Factor Authentication&lt;/h2&gt;
+&lt;p&gt;There are a number of ways to manage your two factor authentication, but the way I belive to be best is having the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Physical security keys (e.g. Yubikey) - one you keep on your person at all times, and one that always stays plugged into your main computer.&lt;/li&gt;
+&lt;li&gt;Mobile Authenticator app.&lt;/li&gt;
+&lt;li&gt;Recovery keys, printed and stored in a fire safe vault.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You &lt;em&gt;must have redundancy&lt;/em&gt;, if you do not you &lt;strong&gt;run the risk of getting locked out of accounts&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not a fan of SMS two factor (which runs rampant), nor am I a fan of &amp;ldquo;get a prompt because you&amp;rsquo;re signed in elsewhere&amp;rdquo; style.&lt;/p&gt;
+&lt;p&gt;Accounts that should be secured with 2FA:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accounts that have personal or financial information (e.g. online banking)&lt;/li&gt;
+&lt;li&gt;Accounts that manage other accounts (e.g. email accounts)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With 2FA set up, even if the bank you use has a breach that leaks your password, nobody will be able to get into your account unless they also have your security key or phone.&lt;/p&gt;
+&lt;h2 id=&#34;the-final-takeaway&#34;&gt;The Final Takeaway&lt;/h2&gt;
+&lt;p&gt;The main takeaway here is that your username/password combinations for online services should &lt;em&gt;not&lt;/em&gt; be trusted to remain secret.
+Your job is to ensure that when your account credentials are inevitably leaked online, it has little to no impact on you.
+You can achieve this via using a password manager to manage many distinct passwords, and securing all the important accounts with two-factor authentication.&lt;/p&gt;
+&lt;p&gt;Remember that this is all mainly to stop malicious third parties on the internet - all of this falls apart if someone gets physical access to your unlocked computer, or has a gun to your head.&lt;/p&gt;
+&lt;p&gt;Regardless, I hope this has been helpful! Please reach out to me on Twitter @wneville_ with any thoughts or criticisms you may have, always love a good chat about security.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

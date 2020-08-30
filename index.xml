@@ -7,20 +7,626 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Sun, 23 Aug 2020 11:37:44 -0400</lastBuildDate>
-    
-	<atom:link href="https://wneville.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 23 Aug 2020 11:37:44 -0400</lastBuildDate><atom:link href="https://wneville.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Speedrunning: A Dance of Dependencies and Restrictions</title>
       <link>https://wneville.com/blog/speedrunning-dependencies-restrictions/</link>
       <pubDate>Sun, 23 Aug 2020 11:37:44 -0400</pubDate>
       
       <guid>https://wneville.com/blog/speedrunning-dependencies-restrictions/</guid>
-      <description>Thesis  What does it mean to complete a &amp;#34;speedrun&amp;#34; of a video game? Abstractly, completing a &amp;#34;speedrun&amp;#34; of a game is to satisfy some predetermined set of dependencies as quickly as possible while adhering to a predetermined set of restrictions.
- This post will explore the nature of these sets of &amp;#34;dependencies&amp;#34; and &amp;#34;restrictions&amp;#34; that the community establishes for their games.
-  The Definition of Completion can be Subjective  Let&amp;#39;s take a step back: what does it mean to beat a game?</description>
+      <description>
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Thesis
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;What does it mean to complete a &amp;#34;speedrun&amp;#34; of a video game?
+Abstractly, completing a &amp;#34;speedrun&amp;#34; of a game is to satisfy some predetermined set of dependencies as quickly as possible while adhering to a predetermined set of restrictions.&lt;/p&gt;
+&lt;p&gt;
+This post will explore the nature of these sets of &amp;#34;dependencies&amp;#34; and &amp;#34;restrictions&amp;#34; that the community establishes for their games.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+The Definition of Completion can be Subjective
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;Let&amp;#39;s take a step back: what does it mean to beat a game?&lt;/p&gt;
+&lt;p&gt;
+This is subjective, but an attempted casual answer to this question might look like this: &lt;em&gt;&lt;strong&gt;&amp;#34;Progress through the game&amp;#39;s story, complete all the levels, and defeat the final boss.&amp;#34;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+The game presents challenges to the player, and when the player completes these challenges they emerge triumphant: they have &amp;#34;beaten&amp;#34; the game. The credits roll, a virtual world is saved (maybe) and they are left with a sense of accomplishment.&lt;/p&gt;
+&lt;p&gt;
+However, the player could reload their save file and explore all remaining nooks and crannies in the game - maybe the game even has a meter that display a completion percentage, and the player could continue until that displays &lt;em&gt;100%&lt;/em&gt;.
+This is another form of completion that one might call &lt;em&gt;full completion&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;
+In the speedrunning world, each game&amp;#39;s community will typically define at what point the game is considered beaten or completed.
+Throughout the rest of this post, this community defined point will be referred to as the &lt;em&gt;&lt;strong&gt;definition of completion&lt;/strong&gt;&lt;/em&gt;, or &lt;em&gt;&lt;strong&gt;DoC&lt;/strong&gt;&lt;/em&gt; for brevity. &lt;/p&gt;
+&lt;p&gt;
+Let&amp;#39;s consider two examples where our DoC is to defeat the game&amp;#39;s final boss:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;What if the game this game was non-linear, and didn&amp;#39;t require the player to visit all areas of the game and &amp;#34;consume&amp;#34; all of the content within prior to confronting the final boss?
+The player would probably try to visit every required area as quickly as possible, gather all required items/skills, and confront the final boss as early as is possible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now, what if the game &lt;span style=&#34;text-decoration: underline;&#34;&gt;was&lt;/span&gt; linear, but the player learned of a way to bypass an area that was intended to be required, and end up confronting the final boss earlier than would have otherwise been possible?
+In essence, the only difference between this and the previous example is that the number of areas the player is required to visit is reduced by one.
+However, how the player is playing the game is now inherently different. They are no longer playing by the game&amp;#39;s rules - they are executing an action that the developers (probably) did not intend for the player to do.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Dependencies
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;Let&amp;#39;s abstract this concept of required &amp;#34;things&amp;#34; the player has to do to beat the game to be a &lt;em&gt;&lt;strong&gt;dependency&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;
+A &lt;em&gt;dependency&lt;/em&gt; is something that the player must satisfy in order to achieve their DoC.
+Examples of common dependencies one finds in games are completing a level, collecting an item, and reading specific character dialogues.&lt;/p&gt;
+&lt;p&gt;
+To satisfy the definition of beating the game in the lowest amount of time possible, the player has two key ways of saving time: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Improving their own gameplay and consistency through practice&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Finding ways of reducing dependencies so that they have overall less game to play.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There is a certain irony in the fact that the most passionate fans of a game spend countless hours discovering and applying new ways of &lt;span style=&#34;text-decoration: underline;&#34;&gt;reducing&lt;/span&gt; the amount of the game they have to play.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+As time passes…
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;The longer a game sticks around, the more things players will discover that allow them to reduce dependencies.
+Players find ways of tricking the game into warping the player to late in the game or giving the player key items outside of the expected source.&lt;/p&gt;
+&lt;p&gt;
+Eventually, a game may reach a state with some of the following issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The number of dependencies to beat the game may be a fraction of what it used to be - multi-hour games may be reduced to an hour or two (or in our upcoming case study, less than 10 minutes).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The techniques discovered that allow players to bypass large segments of the game may be technically very difficult, or inconsistent leading to them being &amp;#34;not fun&amp;#34;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The player population may have pushed their skill level to such a point that, barring the discovery of new ways to reduce dependencies even further, faster times become very unlikely barring absolute perfection of gameplay.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To keep the game fresh and fun, community members may experiment with applying limitations on themselves to reduce the available actions they can perform to bypass dependencies.
+Doing so changes how the player must play the game, as the fastest sequence of actions they could take to satisfy the DoC will depend on what options are available to them.&lt;/p&gt;
+&lt;p&gt;
+Thus enters the concept of &lt;em&gt;&lt;strong&gt;restrictions&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Restrictions
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;A &lt;em&gt;restriction&lt;/em&gt; is something that the player is &lt;span style=&#34;text-decoration: underline;&#34;&gt;not&lt;/span&gt; allowed to do in their pursuit of satisfying the DoC.&lt;/p&gt;
+&lt;p&gt;
+Restrictions are often placed in order to modify the &lt;em&gt;&lt;strong&gt;route&lt;/strong&gt;&lt;/em&gt; (ordered sequence of actions) that the player takes to satisfy the DoC as quickly as possible.&lt;/p&gt;
+&lt;p&gt;
+Alternatively, restrictions may be put into place to ensure fairness across the player base.
+For example, if a version of the game that had a very limited print run (and is thus expensive to acquire second hand) is shown to be substantially faster due to a version exclusive trick, the community may opt to ban this trick to keep the fastest times from being cost prohibitive.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Theoretical Example of Applying Restrictions and/or Dependencies for Route Variety
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;Here&amp;#39;s a theoretical example: there exists a game where one must go collect three magic flowers from dungeons in order to open a door immediately behind which lies the final boss fight.
+The community defines the DoC as &lt;em&gt;&lt;strong&gt;&amp;#34;Defeating the final boss.&amp;#34;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+The boss door is located very near to where the player begins the game.
+It is discovered over time that there is a load trigger (some portion of 3D space that, when touched by the player character, will load a different portion of the game and teleport the character there) that is always loaded behind the door.
+If the player were able to make their character touch this load trigger, they would enter the boss fight regardless of how many magic flower they have collected.
+Naturally, a technique is eventually discovered that allows players to consistently touch the load trigger without opening the door by exploiting a glitch to clip (i.e. pass through something solid) through the door.
+With this technique in hand, players now have the ability to confront the final boss almost instantly after starting a new game; this bypasses almost the entirety of the game&amp;#39;s content.&lt;/p&gt;
+&lt;p&gt;
+While this door clip may enable the fastest known way to defeat the final boss, this may not be the experience that the player wants to do over and over while they work on improving their time.
+In this case, some players may choose to apply a restriction of disallowing glitches that allow clipping.
+Adhering to this restriction would form a new route, as the player would once again be forced to go collect the three magic flowers in order to open the door via the &amp;#34;intended&amp;#34; means.&lt;/p&gt;
+&lt;p&gt;
+Alternatively, players might consider the glitch that enables the clip &lt;span style=&#34;text-decoration: underline;&#34;&gt;not&lt;/span&gt; to be the part of the route they take issue with; maybe the glitch is fun to execute or opens up possibilities in how to approach obstacles in the game.
+In this case, players might instead opt to include an additional dependency in their DoC, such that it reads as &lt;em&gt;&lt;strong&gt;&amp;#34;Collect all three magic flowers then defeat the final boss.&amp;#34;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+The difference between disallowing the clip glitch altogether rather than requiring the player collect all the magic flowers is that, in the latter case, the player is free to utilize the clip glitch to make the collection of the magic flowers a faster endeavor.
+Even better, if there is a long cutscene that the player would need to watch of their character presenting the flowers to open the boss door, it may be faster for the player to clip past the door after collecting the flowers anyway!&lt;/p&gt;
+&lt;p&gt;
+Assuming the route that player takes to satisfy the DoC in either case is entertaining, other players may become interested in running it.
+This creates the need for a named grouping of dependencies and/or restrictions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Categories
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;A speedrun &lt;em&gt;&lt;strong&gt;category&lt;/strong&gt;&lt;/em&gt; for a game is a named grouping of dependencies and/or restrictions.
+Dependencies will often be abstracted as a high level DoC (e.g. &amp;#34;Collect all three magic flowers then defeat the final boss&amp;#34;), whereas the restrictions will often be a list of banned techniques or categories of techniques.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+Case Study - Zelda: Ocarina of Time
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;All information in this case study is current as of August 23rd, 2020. It will eventually become outdated thanks to the beautiful dynamism of speedrunning.&lt;/p&gt;
+&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-9&#34;&gt;
+The Intended Path
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;p&gt;Considering an &amp;#34;intended&amp;#34; DoC of &lt;em&gt;&lt;strong&gt;&amp;#34;Defeat the final boss.&amp;#34;&lt;/strong&gt;&lt;/em&gt;, the following details a &lt;em&gt;&lt;strong&gt;very high level overview&lt;/strong&gt;&lt;/em&gt; of the actions (without the story context) the player is meant to take in order to satisfy the DoC.
+Navi, the player&amp;#39;s fairy companion, will periodically hint the player of where they should go next and takes them on this path.
+If you&amp;#39;ve played Zelda: Ocarina of Time before, you can probably skip this section.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Collect Sword and Shield in Kokiri Forest, beat Deku Tree, collect Kokiri Emerald.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get Zelda&amp;#39;s Letter and Zelda&amp;#39;s Lullaby, go up Death Mountain to Goron City. Go back into Kokiri Forest to learn Saria&amp;#39;s Song, play it to Darunia to get Goron Bracelet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Goron Bracelet to throw Bomb Flower to open Dodongo&amp;#39;s Cavern. Beat Dodongo&amp;#39;s Cavern, collect Goron Ruby.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go up Zora&amp;#39;s River to Zora&amp;#39;s Domain, win Silver Scale from Diving Game. Dive to Ruto&amp;#39;s Letter in Lake Hylia, present to King Zora (mweep).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Present fish to Jabu Jabu, enter belly. Beat Jabu Jabu&amp;#39;s Belly, collect Zora Sapphire.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go back to Hyrule Castle, get Ocarina of Time from Zelda fleeing the castle on horseback.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open Door of Time using Ocarina of Time + Spiritual Stones, pull Master Sword, become adult. Collect Light Medallion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to Kakariko graveyard, get Hookshot and Song of Storms.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Hookshot to enter Forest Temple, beat Forest Temple, get Forest Medallion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stop rolling Goron in Goron City to open doors and get Goron Tunic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hookshot over bridge to access Fire Temple entrance. Beat Fire Temple, get Fire Medallion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to Ice Cavern in Zora&amp;#39;s Fountain, get to the end to collect Iron Boots.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Iron Boots and Hookshot to enter Water Temple. Beat Water Temple, get Water Medallion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go back to child, get Din&amp;#39;s Fire. Use Song of Storms to drain Well in Kakariko, collect Lens of Truth from Bottom of the Well. Go back to adult.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Din&amp;#39;s Fire to enter Shadow Temple. Beat Shadow Temple, get Shadow Medallion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter Gerudo Fortress, free four carpenters to get the Gerudo Card. Open gate to Haunted Wasteland.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Lens to cross Haunted Wasteland. Enter Spirit Temple, realize you can&amp;#39;t do anything, leave to collect Requiem of Spirit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go back to child, play Requiem of Spirit. Proceed through Spirit Temple until Silver Gauntlets collected.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go back to adult, play Requiem of Spirit, beat Spirit Temple. Get Spirit Medallion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to Ganon&amp;#39;s Castle, cross bridge that appears upon having all six Medallions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Complete the six trials in Ganon&amp;#39;s Castle to dispel the barrier blocking the way to Ganon&amp;#39;s Tower.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Climb Ganon&amp;#39;s Tower, defeat Ganondorf. Escape as castle collapses.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Investigate strange noise in rubble to initiate Ganon fight. Defeat Ganon, stab it in the face, game beaten.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-10&#34;&gt;
+Category Analyses
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;p&gt;
+Not all categories will be summarized here, only ones that showcase variety in combinations of dependencies and/or restrictions.&lt;/p&gt;
+&lt;p&gt;
+The core DoC for OoT is as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;If defeating Ganon, time ends on the first frame of the final blow cutscene.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;If wrong warping into the credits, timing ends on the first frame of the fade-in of any cutscene which normally takes place after the Ganon final slash, and which will eventually reach The End screen.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All additional dependencies added into categories are listed separately and are considered required in addition to either of the above.&lt;/p&gt;
+&lt;p&gt;
+Many categories have been split into &lt;code class=&#34;verbatim&#34;&gt;SRM&lt;/code&gt; and &lt;code class=&#34;verbatim&#34;&gt;No SRM&lt;/code&gt; variants after the discovery of this glitch, due to the fundamentally route changing nature of it. The variant being analyzed will be noted.&lt;/p&gt;
+&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-11&#34;&gt;
+Any%
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-12&#34;&gt;
+Summary
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Player manipulates in game memory to perform an exploit known as ACE (Arbitrary Code Execution), allowing them to warp to end credits from Kokiri Forest.&lt;/p&gt;
+&lt;p&gt;
+Satisfies the wrong warp DoC.&lt;/p&gt;
+&lt;p&gt;
+Record as of 8/23/2020: &lt;a href=&#34;https://www.speedrun.com/oot/run/ylkwr3xz&#34;&gt;7m 32s 833ms by Savestate&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-13&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-13&#34;&gt;
+Dependencies
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-13&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;N/A, WW DoC&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-14&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-14&#34;&gt;
+Restrictions
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-14&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;N/A&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-15&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-15&#34;&gt;
+Notable Techniques
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-15&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ACE&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-16&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-16&#34;&gt;
+100% (SRM)
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-16&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div id=&#34;outline-container-headline-17&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-17&#34;&gt;
+Summary
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-17&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Player must achieve 100% completion in the game before defeating Ganon.&lt;/p&gt;
+&lt;p&gt;
+Utilizes a huge range of different techniques - the fastest route is nothing remotely close to the intended path through the game.&lt;/p&gt;
+&lt;p&gt;
+Record as of 8/23/2020: &lt;a href=&#34;https://www.speedrun.com/oot/run/zx2gwjem&#34;&gt;3h 38m 01s by zfg&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-18&#34;&gt;
+Dependencies
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1PqqpZs_wRDmMeTdtFCdiNNhC4qIB0_PncwH7Uzdhlh0/edit#gid=0&#34;&gt;Requirements for 100% completion&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-19&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-19&#34;&gt;
+Restrictions
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-19&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ACE is banned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-20&#34;&gt;
+Notable Techniques
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Leverages just about every known useful glitch (barring ACE) in Ocarina of Time to go faster, but makes extensive use of SRM.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-21&#34;&gt;
+Defeat Ganon (No SRM)
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-22&#34;&gt;
+Summary
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Players must complete the &amp;#34;Defeat Ganon&amp;#34; core DoC with only minimal restrictions.&lt;/p&gt;
+&lt;p&gt;
+Record as of 8/23/2020: &lt;a href=&#34;https://www.speedrun.com/oot/run/m35ow66y&#34;&gt;16m 49s 366ms by RichardSage&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-23&#34;&gt;
+Dependencies
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;N/A, Defeat Ganon DoC&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-24&#34;&gt;
+Restrictions
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;SRM and ACE are banned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-25&#34;&gt;
+Notable Techniques
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;GIM to get bottle in Deku Tree.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ganondoor to wrong warp to collapse sequence&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HESS off falling rock to skip majority of collapse.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ISG with Deku Stick to damage Ganon.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-26&#34;&gt;
+GSR (Ganondorf Source Requirements)
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-27&#34;&gt;
+Summary
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Players must satisfy the core &amp;#34;Defeat Ganon&amp;#34; DoC after collecting the required items from source necessary to defeat Ganondorf prior to initiating the final fight.&lt;/p&gt;
+&lt;p&gt;
+Light Arrows are required to stun Ganondorf in the fight.
+Light Arrows are acquired from a cutscene that should require owning all medallions - however, the game only checks for the Shadow and Spirit medallions, so those are the only ones required.&lt;/p&gt;
+&lt;p&gt;
+Magic is required to shoot Light Arrows.
+Magic is acquired by playing Zelda&amp;#39;s Lullaby at the fairy fountain at the top of Death Mountain.&lt;/p&gt;
+&lt;p&gt;
+A quiver is also required to shoot Light Arrows.
+The quiver is acquired by collecting the Fairy Bow from Forest Temple.&lt;/p&gt;
+&lt;p&gt;
+All forms of wrong warping, item manipulation and cut scene skips are disallowed.&lt;/p&gt;
+&lt;p&gt;
+Record as of 8/23/2020: &lt;a href=&#34;https://www.speedrun.com/oot/run/zqw7rv1z&#34;&gt;1h 13m 31s by CountLG&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-28&#34;&gt;
+Dependencies
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Defeat Ganon DoC with following additional dependencies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Defeat Ganondorf&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get Light Arrows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Collect Shadow and Spirit Medallions&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get magic&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Get Zelda&amp;#39;s Lullaby&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get Quiver 30&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-29&#34;&gt;
+Restrictions
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Wrong Warping is banned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RBA / BA / GIM are banned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SRM and ACE are banned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cutscene skips from blue warps banned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-30&#34;&gt;
+Notable Techniques
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;WESS Escape, Pokey Escape or Walking-While-Talking to leave Kokiri Forest without beating Deku Tree.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cucco or Navi dive to get to Bottom of the Well without draining the water.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blank A or Ocarina Dive to get to Bombchu chest in Bottom of the Well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Damage boosting to get over Hyrule Castle Moat.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dying on same frame as cutscene starting to get Zelda&amp;#39;s Lullaby without watching cutscene.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DoT skip to bypass all requirements of opening Door of Time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hookshot jump to enter Shadow Temple early.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Boat(key) skip to go directly to Bongo Bongo fight.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Damage Clip to bypass Gerudo Gate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spirit Hover up to Mirror Shield to bypass normal Spirit Temple progression.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Statue Climb + Ground Clip or Head Skip to bypass Spirit Temple boss key.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hover Boost to courtyard ledge in Forest Temple.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ground Jumps + Impossible Jump to bypass strength requirement to move blocks in Forest Temple.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Trials Skip to bypass doing any trials in Ganon&amp;#39;s Castle.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Collapse Skip to bypass majority of escape sequence after Ganondorf.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Superslide into Ganon fight trigger to keep Master Sword.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-31&#34;&gt;
+Glitchless (Any% Restricted)
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-31&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div id=&#34;outline-container-headline-32&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-32&#34;&gt;
+Summary
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-32&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Players must satisfy the normal &amp;#34;Defeat Ganon&amp;#34; DoC while adhering to a comprehensive set of restrictions on allowed techniques.&lt;/p&gt;
+&lt;p&gt;
+The category is defined by movement optimizations rather than big &amp;#34;make or break the run&amp;#34; tricks.&lt;/p&gt;
+&lt;p&gt;
+Record as of 8/23/2020: &lt;a href=&#34;https://www.speedrun.com/oot/run/yw8jqo9y&#34;&gt;3h 40m 36s by ChefBear&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-33&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-33&#34;&gt;
+Dependencies
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-33&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;N/A, Defeat Ganon DoC&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-34&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-34&#34;&gt;
+Restrictions
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-34&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Please see the &lt;a href=&#34;https://www.speedrun.com/oot#Glitchless&#34;&gt;official category rules&lt;/a&gt; for the full detailed list of allowed and disallowed techniques.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-35&#34; class=&#34;outline-5&#34;&gt;
+&lt;h5 id=&#34;headline-35&#34;&gt;
+Notable Techniques
+&lt;/h5&gt;
+&lt;div id=&#34;outline-text-headline-35&#34; class=&#34;outline-text-5&#34;&gt;
+&lt;p&gt;Many unique movement optimizations and &amp;#34;parkour&amp;#34; jumps that are unique to the category.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-36&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-36&#34;&gt;
+Further Reading/Viewing
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-36&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-container-headline-37&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-37&#34;&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=SPi_d0zhNFc&#34;&gt;Fig&amp;#39;s overview of SRM, ACE and beyond&lt;/a&gt;
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-38&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-38&#34;&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=2ebZ94KGlVw&#34;&gt;dannyB&amp;#39;s overview of the evolution of the Glitchless category&lt;/a&gt;
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-39&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-39&#34;&gt;
+&lt;a href=&#34;https://www.youtube.com/playlist?list=PL7CC9oUidlPuYF4siWPg9TFaxo9chpvV_&#34;&gt;Gymnast86&amp;#39;s &amp;#34;Elusive Glitches&amp;#34; video series&lt;/a&gt;
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-40&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-40&#34;&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=-hUIp3eUyKI&#34;&gt;The Legend of the Barrier Skip - The Holy Grail of Zelda {Wind Waker} speedrunning&lt;/a&gt;
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -29,9 +635,111 @@
       <pubDate>Wed, 02 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://wneville.com/blog/my-emacs-journey/</guid>
-      <description>init I&amp;rsquo;m rapidly becoming known as &amp;ldquo;that Emacs guy&amp;rdquo; in my office.
-I&amp;rsquo;m very vocal about my love for this ~35 year old piece of software, and (unsuccessfully) evangelize it amongst my peers.
-Whenever one of my coworkers shows the smallest amount of interest in it, such as &amp;ldquo;Hey that presentation you gave with the code blocks, what was that in?&amp;rdquo;, it&amp;rsquo;s off to the races. I&amp;rsquo;m prone to inundate them with additional reading materials and youtube videos about emacs and org-mode and why they should also consider using it to organize their life.</description>
+      <description>&lt;h2 id=&#34;init&#34;&gt;init&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m rapidly becoming known as &amp;ldquo;that Emacs guy&amp;rdquo; in my office.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m very vocal about my love for this ~35 year old piece of software, and (unsuccessfully) evangelize it amongst my peers.&lt;/p&gt;
+&lt;p&gt;Whenever one of my coworkers shows the smallest amount of interest in it, such as &amp;ldquo;Hey that presentation you gave with the code blocks, what was that in?&amp;rdquo;, it&amp;rsquo;s off to the races.
+I&amp;rsquo;m prone to inundate them with additional reading materials and youtube videos about emacs and org-mode and why they should also consider using it to organize their life.&lt;/p&gt;
+&lt;p&gt;Naturally, I&amp;rsquo;m rarely asked about it twice.&lt;/p&gt;
+&lt;p&gt;I still consider myself to be very junior as an Emacs user. There&amp;rsquo;s much I do not know, and even more that I do not know that I do not know.&lt;/p&gt;
+&lt;p&gt;As of this writing, I&amp;rsquo;ve been casually interested in Emacs for about two years, and have been a fervent user with it as my primary IDE and organization tool for the past six-eight months.&lt;/p&gt;
+&lt;p&gt;With this post, I&amp;rsquo;m hoping to detail out my ever ongoing journey as an Emacs user. I&amp;rsquo;m hoping that this will prove to be useful to newcomers to Emacs, or that it will at least expand my currently very
+small social network of Emacs users.&lt;/p&gt;
+&lt;h2 id=&#34;history&#34;&gt;history&lt;/h2&gt;
+&lt;h3 id=&#34;the-dark-ages&#34;&gt;the dark ages&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s get one thing out of the way - while pursuing my computer science degree in college, I was mostly a Vim user.&lt;/p&gt;
+&lt;p&gt;I wasn&amp;rsquo;t really a power user, but I could navigate effectively.
+My Vim config was mostly copied from others on the internet, but without understanding what everything did.
+Once I graduated college and took a non-coding job, I didn&amp;rsquo;t really have much text editing work to do, and I dropped off Vim.&lt;/p&gt;
+&lt;p&gt;Vim is still my go-to when remoting into servers and making quick changes, which honestly is the perfect use case for it.&lt;/p&gt;
+&lt;h3 id=&#34;pursuing-enlightenment&#34;&gt;pursuing enlightenment&lt;/h3&gt;
+&lt;p&gt;Emacs has been on my radar ever since I started getting into programming, but my first attempt at using it was probably in 2015.
+I was working as a technician at an IT helpdesk, so I wasn&amp;rsquo;t very opinionated about my text editors yet.
+A friend of mine was working at a startup doing Android work, and his boss at the time used Emacs keybindings in IntelliJ.
+Apparently whenever his boss came over and wanted to type something, he would fail due to the built in IntelliJ bindings, so he &amp;ldquo;strongly encouraged&amp;rdquo; my friend to switch.&lt;/p&gt;
+&lt;p&gt;After hearing about the interesting keybindings, I thought I&amp;rsquo;d go straight to the source: I downloaded Emacs to see what it was all about.&lt;/p&gt;
+&lt;p&gt;I probably lasted less than 5 minutes. It seemed so old school! The splash screen was ugly, I didn&amp;rsquo;t know what all the UI elements were, and I struggled through the built in tutorial.&lt;/p&gt;
+&lt;p&gt;I promptly uninstalled Emacs, and moved on with my life, proclaiming that it wasn&amp;rsquo;t for me.&lt;/p&gt;
+&lt;p&gt;I switched jobs to an Ad Tech company doing Tier 1.5 work (vendor certification work), and during this time I mostly used Notepad++ for jamming down random notes.
+I never saved any of them, so I probably ended that job with 300 tabs in NP++ memory.&lt;/p&gt;
+&lt;h3 id=&#34;reattempting-enlightenment&#34;&gt;reattempting enlightenment&lt;/h3&gt;
+&lt;p&gt;In early 2017, I got myself my first real programming job - huzzah!
+The role was in the IT sector of a bank, and I was working on a platform that exposed APIs for working with in-house infrastructure.
+This was a greenfield project, and we decided to build it with a container and microservice-first approach.
+Being a large enterprise financial company, we settled on the JVM as our application runtime, with Java as the core language.
+Naturally, IntelliJ was the IDE of choice.&lt;/p&gt;
+&lt;p&gt;It wasn&amp;rsquo;t long until I discovered Clojure.
+Clojure is a functional programming language - a lisp that runs in the JVM. It&amp;rsquo;s elegant and production ready.
+To this day, I&amp;rsquo;ve not had the opportunity to work with Clojure much, but I&amp;rsquo;ve always been in love with its principles.&lt;/p&gt;
+&lt;p&gt;I decided I wanted to learn Clojure, and to try to integrate it into our API platform - if all our microservices were JVM based, who says one couldn&amp;rsquo;t be in Clojure?&lt;/p&gt;
+&lt;p&gt;I borrowed the book &lt;strong&gt;Clojure for the Brave and True&lt;/strong&gt; from my team lead at the time, who also had pipe dreams of using Clojure for a financial modeling startup.
+Brave Clojure (as I&amp;rsquo;ll call it henceforth) is a great book - it has hearty doses of humor, and is a must read if you&amp;rsquo;re interested in Clojure.
+At the end of the first chapter, the book describes a few different popular IDE options for Clojure - namely, Emacs as well as IntelliJ with the Cursive plugin.
+However, the author is moderatly opinionated, and the second chapter of the book is entirely about configuring and using Emacs.&lt;/p&gt;
+&lt;p&gt;I pored over every word in this Emacs chapter - I found it fascinating.
+It was describing a way to configure and use Emacs to achieve a productive programming workflow.
+This is what was lacking on my first Emacs attempt, I had no goal - I tried using Emacs for the sake of using it.&lt;/p&gt;
+&lt;p&gt;This chapter does have one issue though, which is that the author provides a zip file of a recommended Emacs configuration.
+This configuration has not aged entirely well (there have been a few packages in the last few years which would clean it up, such as &lt;em&gt;use-package&lt;/em&gt;), and will not suit all users.
+Additionally, if it ever breaks, the user will likely be dead in the water on what to do.&lt;/p&gt;
+&lt;p&gt;Regardless, I used this configuration and followed every step of the chapter. I also gave the built in tutorial another go, to greater success.
+I was beginning to understand the fluidity of using Emacs, but I still had no knowledge in configuring and tweaking it for my use cases.&lt;/p&gt;
+&lt;p&gt;I now felt comfortable with Emacs, but pretty much only for Clojure with the Brave Clojure configuration.
+It felt a bit like having one highly specialized tool in your work belt that you used once a year, if ever.
+I ended up not having too much spare time to work on Clojure, and as a result my Emacs usage dwindled into nothingness.&lt;/p&gt;
+&lt;p&gt;What did persist however, were the keybindings.
+I made the decision to swap my IntelliJ keybindings to be the built in Emacs keymap.
+It did a pretty good job mapping navigational keys and common operations to their default Emacs values.
+Quickly, nobody besides me could use my IntelliJ anymore (made more difficult with my keyboard, a HHKB), and I had the muscle memory for navigational keys well developed.&lt;/p&gt;
+&lt;h3 id=&#34;enlightenment-as-a-primary-ide&#34;&gt;enlightenment as a primary IDE&lt;/h3&gt;
+&lt;p&gt;Fast forward to the beginning of 2019, and I&amp;rsquo;ve got another new job - my first with an actual &lt;em&gt;software engineer&lt;/em&gt; title.
+We now jump to present tense, as this is my current job as of this writing.&lt;/p&gt;
+&lt;p&gt;The tech stack at this role is Python on the backend.
+I&amp;rsquo;d hardly worked with Python prior to this role, so in my first month I watched some professional development videos to get up to speed on the language.&lt;/p&gt;
+&lt;p&gt;When it came time to choose an IDE, I originally settled with PyCharm.
+It was almost identical to IntelliJ with which I was already familiar, and most of my coworkers were also using PyCharm.&lt;/p&gt;
+&lt;p&gt;Over the next few months, a few catalyzing factors lead to me using Emacs exclusively, which we&amp;rsquo;ll go over in detail.&lt;/p&gt;
+&lt;h5 id=&#34;community&#34;&gt;Community&lt;/h5&gt;
+&lt;p&gt;While I&amp;rsquo;m the only person at my current role who uses Emacs, I started to meet others who did use it.&lt;/p&gt;
+&lt;p&gt;I started showing up a little more regularly to the Emacs NY Meetup, and chatting with other there.&lt;/p&gt;
+&lt;p&gt;I started watching more YouTube videos about Emacs topics, which were mostly recorded from previous sessions of the NY meetup which I had begun attending.
+This spurred my interest in some other topics, which I will discuss below, but mainly the videos helped instill that sense of community further.&lt;/p&gt;
+&lt;p&gt;I started listening to all the Emacs related podcasts that were available, getting a much better understanding of the ecosystem in the process.
+Emacs is a lot less intimidating when you understand to what names like &lt;em&gt;helm&lt;/em&gt;, &lt;em&gt;company&lt;/em&gt; and &lt;em&gt;projectile&lt;/em&gt; pertain.&lt;/p&gt;
+&lt;p&gt;Lastly and most importantly, I discovered my friend Adrien is a pseudo-celebrity in the Emacs community.
+He&amp;rsquo;s distributed packages for managing Kubernetes, Habitica and Todoist from inside Emacs.&lt;/p&gt;
+&lt;h5 id=&#34;org-mode&#34;&gt;Org-Mode&lt;/h5&gt;
+&lt;p&gt;I&amp;rsquo;m sure if the the population of new Emacs users from the past ~15 years was surveyed on what made them try Emacs, I&amp;rsquo;m sure Org-Mode would feature prominently as a reason.&lt;/p&gt;
+&lt;p&gt;Org-Mode is extremely feature rich and difficult to explain succinctly, but at a high level it is an Emacs major mode that is well suited to note taking, task tracking and outlining.
+Many users manage all aspects of their productive life via org-mode.
+One of the coolest aspects of org-mode is the agenda view, which will consolidate your TODOs and calendar events striped across multiple org files and present them in a daily/weekly view.&lt;/p&gt;
+&lt;p&gt;When I discovered org-mode, I was staggered across 3 different apps to manage my work to-do&amp;rsquo;s, personal to-do&amp;rsquo;s, list management, Dungeons and Dragons organization, etc.
+Org-mode was clearly the tool that I wanted and needed, and this pushed me heavily into the full-time Emacs camp.&lt;/p&gt;
+&lt;p&gt;As of this writing, I use org-mode primarily for note taking as well as managing personal project coding TODOs. I use an external todo app (Todoist) for all other things. Once I have time to spend on it, I can configure the &lt;a href=&#34;https://github.com/abrochard/emacs-todoist&#34;&gt;package&lt;/a&gt; Adrien wrote to get some Emacs Todoist integration.&lt;/p&gt;
+&lt;h5 id=&#34;experience&#34;&gt;Experience&lt;/h5&gt;
+&lt;p&gt;Honestly, I was just in a better position to dive into Emacs at this junction.
+I had gotten more experience wrangling configurations, reading documentation and writing code.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t believe that you need to be a programmer (or otherwise highly technical) to use Emacs effectively.
+That being said, I believe that the experience I gathered in my professional career helped me develop a tinkerer&amp;rsquo;s passion.
+Having this passion fuels my need to endlessly tinker and tweak my Emacs setup, the results of which bring me a lot of joy.&lt;/p&gt;
+&lt;h3 id=&#34;lets-get-technical-what-packages-were-critical-to-using-emacs-as-the-primary-ide&#34;&gt;let&amp;rsquo;s get technical: what packages were critical to using Emacs as the primary IDE?&lt;/h3&gt;
+&lt;p&gt;For this section, I use the term &amp;ldquo;productivity&amp;rdquo; to refer to my ability to and the ease with which I am able to translate thought into code.&lt;/p&gt;
+&lt;p&gt;Before I was willing to commit to Emacs as my primary IDE, I had to ensure that I could at least be close to as productive as I was in my existing tools.&lt;/p&gt;
+&lt;p&gt;The first tool that I really needed to do my job in Emacs was a python mode. I settled on &lt;a href=&#34;https://github.com/jorgenschaefer/elpy&#34;&gt;elpy&lt;/a&gt;, as this seemed a common choice.
+Elpy offered the IDE-like experience I needed for Python development. It wasn&amp;rsquo;t quite as feature rich as PyCharm with regards to flexible code navigation and global refactoring (Note: JetBrains global refactoring is black magic), but it certainly helped me get up and running. Elpy also helped me to learn more about the ecosystem - I learned about packages like &lt;a href=&#34;https://github.com/company-mode/company-mode&#34;&gt;company&lt;/a&gt; and &lt;a href=&#34;https://github.com/flycheck/flycheck&#34;&gt;flycheck&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now I was up and running with a Python IDE. However, I was &lt;em&gt;very&lt;/em&gt; clunky at navigating around Emacs and my project; I could not switch buffers effectively, and I would consistently find files by exact path (watching me do this was a nightmare, trust me). The next two packages that I really needed were &lt;a href=&#34;https://github.com/emacs-helm/helm&#34;&gt;Helm&lt;/a&gt; and &lt;a href=&#34;https://github.com/bbatsov/projectile&#34;&gt;Projectile&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Helm is an incremental search and selection narrowing framework, but it feels like a lot more than that. In the way that I use it, Helm is effectively a tool that, when searching, opens new buffers with results that are easily navigable.&lt;/p&gt;
+&lt;p&gt;Projectile is a tool that makes it easy to work with &amp;ldquo;projects&amp;rdquo;. In my context, a project is almost always a git repository. Projectile offers functions to quickly switch between registered projects, find files within a project, find text patterns within a project, etc.&lt;/p&gt;
+&lt;p&gt;At this point, I&amp;rsquo;m almost caught up to my original productivity, with the added benefit that I was having a lot of fun as well.&lt;/p&gt;
+&lt;p&gt;Out of curiosity, I swapped over from elpy to using &lt;a href=&#34;https://github.com/emacs-lsp/lsp-mode&#34;&gt;lsp-mode&lt;/a&gt;. Once I got it configured, I found it to be snappier and got me closer to that &amp;ldquo;IDE&amp;rdquo; feeling with features like peeking into definitions of functions. I&amp;rsquo;m still at the time of this writing running into occasional issues with lsp-mode - it&amp;rsquo;s pretty bleeding edge at this point, especially if you&amp;rsquo;re using the &lt;a href=&#34;https://github.com/palantir/python-language-server&#34;&gt;pyls&lt;/a&gt;. Some of my issues will be resolved with my primary work codebase completes its python2 -&amp;gt; python3 migration, with the eventual dependency bump.&lt;/p&gt;
+&lt;p&gt;Another package that I started leveraging at this point was &lt;a href=&#34;https://github.com/joaotavora/yasnippet&#34;&gt;yasnippet&lt;/a&gt;. This is a legendary package - it&amp;rsquo;s a snippet creator, but it allows embedding arbitrary emacs-lisp code into your templates, so it becomes something much more powerful. I&amp;rsquo;ve still only scratched the surface here. I highly recommend &lt;a href=&#34;https://github.com/AndreaCrotti/yasnippet-snippets&#34;&gt;this community library&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The package that has consistently had my coworkers ooh-ing and aah-ing is &lt;a href=&#34;https://github.com/pashky/restclient.el&#34;&gt;restclient&lt;/a&gt;. This makes making HTTP requests &lt;em&gt;very&lt;/em&gt; smooth, and has allowed me to almost entirely offboard from Postman.
+Additionally, my friend Adrien is working on a package, &lt;a href=&#34;https://github.com/abrochard/walkman&#34;&gt;walkman&lt;/a&gt;, to do HTTP requests in an org file. With a little more customization, one can get an even more Postman-like experience.&lt;/p&gt;
+&lt;p&gt;I still have a ways to go - I still don&amp;rsquo;t have great tools for refactoring, nor have I spent much time sharpening the knife of making my editing more efficient.&lt;/p&gt;
+&lt;h3 id=&#34;in-summary&#34;&gt;in summary&lt;/h3&gt;
+&lt;p&gt;I hope that this was an interesting read for you, and that it maybe sparks an interest in using Emacs yourself - as well as being an efficient tool, it can be a fun hobby.&lt;/p&gt;
+&lt;p&gt;Please feel encouraged to reach out to me on any/all social platforms to chat about Emacs.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -40,7 +748,130 @@ Whenever one of my coworkers shows the smallest amount of interest in it, such a
       <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://wneville.com/blog/citizen-cybersecurity/</guid>
-      <description>TL;DR - You should use a password manager and two factor authentication. What&amp;rsquo;s the haps, homeslice? Nowadays, an individual&amp;rsquo;s online presence is dictated by many, many accounts. Each account has some primary identifier - typically a username, or more commonly an email address. Additionally, each account has its own password. We&amp;rsquo;ve been taught that these passwords must be secure - combinations of letters, number and symbols that would be difficult for someone to guess.</description>
+      <description>&lt;h2 id=&#34;tldr---you-should-use-a-password-manager-and-two-factor-authentication&#34;&gt;TL;DR - You should use a password manager and two factor authentication.&lt;/h2&gt;
+&lt;h2 id=&#34;whats-the-haps-homeslice&#34;&gt;What&amp;rsquo;s the haps, homeslice?&lt;/h2&gt;
+&lt;p&gt;Nowadays, an individual&amp;rsquo;s online presence is dictated by many, many accounts.
+Each account has some primary identifier - typically a username, or more commonly an email address.
+Additionally, each account has its own password.
+We&amp;rsquo;ve been taught that these passwords must be &lt;em&gt;secure&lt;/em&gt; - combinations of letters, number and symbols that would be difficult for someone to guess.&lt;/p&gt;
+&lt;p&gt;Relevant XKCD
+&lt;img src=&#34;https://imgs.xkcd.com/comics/password_strength.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It is not reasonable for most people to remember dozens to hundreds of unique passwords, especially if the passwords themselves are designed to be difficult to remember.
+As a result, passwords invevitably get &lt;em&gt;re-used&lt;/em&gt; across accounts.
+Inherently, this isn&amp;rsquo;t an issue, right? Only you know the password.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wrong.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO insert links to articles about breaches&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You should assume that a malicious third party will get access to one or more of your online accounts from breaches.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve been using the same email for various services, as well as re-using the same password, then you have an issue.
+The attacker compromised one site, but got access to many of your accounts.&lt;/p&gt;
+&lt;p&gt;Diversifying the email address you use for each web account is not practical, especially given that each email account would have its own password. Thus, it&amp;rsquo;s much better to make sure every password you use is distinct.&lt;/p&gt;
+&lt;p&gt;How can we achieve this?&lt;/p&gt;
+&lt;h2 id=&#34;diversifying-your-passwords&#34;&gt;Diversifying your passwords&lt;/h2&gt;
+&lt;h3 id=&#34;cipher&#34;&gt;Cipher&lt;/h3&gt;
+&lt;p&gt;One option is to create a &lt;em&gt;cipher&lt;/em&gt; - a pattern to generate passwords on a per site basis.&lt;/p&gt;
+&lt;p&gt;As a case study, let&amp;rsquo;s create a Pokemon cipher to manage our passwords.&lt;/p&gt;
+&lt;p&gt;Our key will be the domain of the service - for example, &amp;ldquo;facebook.com&amp;rdquo;.
+Our password formula could be as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;password = 
+    First pokemon whose name starts with first letter of domain 
+    + number of letters in domain 
+    + &amp;quot;!&amp;quot; if domain length is even, else &amp;quot;?&amp;quot; 
+    + First pokemon whose name starts with last letter of domain
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &amp;ldquo;facebook.com&amp;rdquo; as an example, the first pokemon whose name starts with F is &amp;ldquo;Fearow&amp;rdquo;, the domain has 8 letters in it, and the first pokemon whose name starts with &amp;ldquo;k&amp;rdquo; is &amp;ldquo;Kadabra&amp;rdquo;, so our password would be: &lt;code&gt;Fearow8!Kadabra&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This approach would generally give us a unique password for each service, unless the domains have a common first letter, last letter and length.&lt;/p&gt;
+&lt;p&gt;The first problem of this approach is that everyone I&amp;rsquo;ve spoken to who uses a cipher to encode their passwords &lt;em&gt;loves&lt;/em&gt; to talk about how they use a cipher to encode their passwords.
+This is tongue and cheek, but don&amp;rsquo;t share your security implementation details ;)&lt;/p&gt;
+&lt;p&gt;The real problem with this approach is that you&amp;rsquo;re introducing a &lt;em&gt;pattern&lt;/em&gt; into your passwords.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say that a few of your passwords using this structure get compromised in large scale breaches.
+The compromised data that exists on the web looks like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;facebook Fearow8!Kadabra
+twitter Tentacool7?Rattata
+instagram Ivysaur9?Metapod
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Uh oh. All of a sudden, that cipher doesn&amp;rsquo;t seem so secure anymore - anybody who notices the pattern and determines your cipher formula has gained access to &lt;em&gt;all of your passwords&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;There are methods you could take you try to make your cipher more robust and &amp;ldquo;uncrackable&amp;rdquo;, but the bad news is that anything &lt;em&gt;you&lt;/em&gt; design will inherently be crackable.&lt;/p&gt;
+&lt;p&gt;Well, what if you didn&amp;rsquo;t know any of your own passwords?&lt;/p&gt;
+&lt;h2 id=&#34;password-manager&#34;&gt;Password Manager&lt;/h2&gt;
+&lt;p&gt;A &lt;em&gt;password manager&lt;/em&gt; is a piece of software you can use to store all of your passwords.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ALARM BELLS, car tires screeching, screams in the distance&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Wait, you want me to put all of my passwords into one location? That seems &lt;em&gt;wildly&lt;/em&gt; insecure. What happens if an attacker gets access to that?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Hear me out, I promise that this is actually the most secure way you could manage your passwords as an average tech savvy citizen.&lt;/p&gt;
+&lt;h4 id=&#34;the-value&#34;&gt;The Value&lt;/h4&gt;
+&lt;p&gt;Using a password manager, you can generate random passwords for every account you create. When you visit those websites, rather than typing in the password manually, you can
+paste it directly from the password manager.&lt;/p&gt;
+&lt;p&gt;What a win, right? Our password diversification problem is solved - we have a unique password per service, so if any of those become compromised, you can sleep at night knowing that none of your &lt;em&gt;other&lt;/em&gt; accounts have been compromised.&lt;/p&gt;
+&lt;p&gt;The downside of this approach is that additional mental load is added when trying to log onto a service, especially on mobile. When prompted for a password, you must switch to your manager, enter the password for that, traverse to the account password you need, copy it, switch back to the site, and paste it in. I hear you, that&amp;rsquo;s a pain, but it&amp;rsquo;s a worthy tradeoff.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s talk about the elephant in the room: &lt;em&gt;the one password to rule them all&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;master-password-security&#34;&gt;Master Password Security&lt;/h4&gt;
+&lt;p&gt;Scroll back up and take a look at that xkcd comic again.&lt;/p&gt;
+&lt;p&gt;To summarize, this password should be something difficult for a computer to guess, but very easy for you to remember.
+It should be long and have &lt;em&gt;some&lt;/em&gt; combination of different types of characters.
+Additionally, your master password should &lt;em&gt;not be relateable to you at all&lt;/em&gt;. Please do not include your pet&amp;rsquo;s names in this password.&lt;/p&gt;
+&lt;p&gt;So, how do you generate a secure master password?&lt;/p&gt;
+&lt;p&gt;One way is to say a sentence that nobody has said before.&lt;/p&gt;
+&lt;p&gt;For example, I could say &amp;ldquo;The rainbow zombies are raiding Antarctica!&amp;rdquo;, and get a perfectly reasonable password of &lt;code&gt;rainbow.zombies.raiding.Antarctica&lt;/code&gt;.
+For even more security, add in a few numbers or special characters that you can remember - something like &lt;code&gt;rainbow.zombies?raiding.Antarctia!42&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, I&amp;rsquo;m no expert on entropy, but this is long and arbitrary enough that no brute force script would stumble into it.&lt;/p&gt;
+&lt;h4 id=&#34;but-isnt-it-risky-to-keep-my-vault-in-the-cloud&#34;&gt;But isn&amp;rsquo;t it risky to keep my vault in the cloud?&lt;/h4&gt;
+&lt;p&gt;No, assuming you&amp;rsquo;re using any well respected and established password manager.&lt;/p&gt;
+&lt;p&gt;The place where you are storing your passwords is your &lt;em&gt;password vault&lt;/em&gt;. Think of this as a locked box.
+When you first boot up your password manager and are prompted for your master password, all you have is a locked box.
+When you enter your master password, it unlocks the box and you are able to access all your passwords.&lt;/p&gt;
+&lt;p&gt;Your master password is the &lt;em&gt;key&lt;/em&gt; to your vault.
+The company which has created the password manager is storing only your vault in the cloud.
+The password management company &lt;em&gt;does not have access to your master password in any form&lt;/em&gt;. Only you have the key to open that box.
+So, if some very talented hackers did manage to get access to some vaults (it has happened in the past), they wouldn&amp;rsquo;t have access to your passwords, only a locked box.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve followed the guide above and created a sufficiently secure master password that can&amp;rsquo;t be guessed by social engineering, you have no real risk keeping your vault in the cloud.&lt;/p&gt;
+&lt;h4 id=&#34;okay-youve-sold-me---now-what-password-manager-should-i-actually-use&#34;&gt;Okay, you&amp;rsquo;ve sold me - now what password manager should I actually use?&lt;/h4&gt;
+&lt;p&gt;There are plenty of good password managers on the market these days - you should balance price and useability.&lt;/p&gt;
+&lt;p&gt;The following are all fine options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lastpass&lt;/li&gt;
+&lt;li&gt;1Password&lt;/li&gt;
+&lt;li&gt;Dashlane&lt;/li&gt;
+&lt;li&gt;Roboform&lt;/li&gt;
+&lt;li&gt;Keepass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Personally, I use Dashlane. It&amp;rsquo;s one of the more expensive options, but I enjoy their UI and emergency contact recovery features. They also have excellent sharing facilities.&lt;/p&gt;
+&lt;p&gt;Generally, I would suggest people go with Lastpass. It&amp;rsquo;s free, and excellent for what it is.
+Initially I was skeptical about it being free (&amp;ldquo;No such thing as a free lunch, what are they getting from me?&amp;quot;), but their business model appears to be based around their enterprise solution.
+Emphatic users of a free password manager are likely to suggest the enterprise offering to their businesses.&lt;/p&gt;
+&lt;h2 id=&#34;but-wait-theres-more&#34;&gt;But wait, there&amp;rsquo;s more!&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s back up for a second.
+I said something really scary earlier, and it&amp;rsquo;s critical to this next section.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;You should assume that a malicious third party will get access to one or more of your online accounts from breaches.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;What?! It&amp;rsquo;s all well and good that when an account gets compromised it won&amp;rsquo;t potentially compromise my other accounts, but what about the accounts that &lt;strong&gt;we cannot let get compromised?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Accounts that would be destructive if compromised (e.g. online banking), or accounts that manage access to other accounts (email), must not be compromised.&lt;/p&gt;
+&lt;p&gt;Modern security is based on three aspects: something you know, something you have, and something you are.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s hand wave the &amp;ldquo;something you are&amp;rdquo;, because that&amp;rsquo;s not really a commercially available option yet.
+Think biometric data, such as fingerprints. Imagine a future where only you are allowed to unlock your phone, and it knows it&amp;rsquo;s you by analyzing the DNA of the skin touching it. The future will be wild.&lt;/p&gt;
+&lt;p&gt;Something you know would be a password. This is what we must assume is not secure; because the &amp;ldquo;thing we know&amp;rdquo; must be stored elsewhere for web accounts, it is liable to be leaked.
+It&amp;rsquo;s interesting to breakdown a password as actually being &amp;ldquo;a thing I said I knew at the time of registration, and that future me will also know&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;That just leaves &amp;ldquo;something you have&amp;rdquo;. The combination of requiring something you know and something you have is referred to as &lt;em&gt;two factor authentication&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So, let&amp;rsquo;s configure something you (and only you) have.&lt;/p&gt;
+&lt;h2 id=&#34;two-factor-authentication&#34;&gt;Two Factor Authentication&lt;/h2&gt;
+&lt;p&gt;There are a number of ways to manage your two factor authentication, but the way I belive to be best is having the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Physical security keys (e.g. Yubikey) - one you keep on your person at all times, and one that always stays plugged into your main computer.&lt;/li&gt;
+&lt;li&gt;Mobile Authenticator app.&lt;/li&gt;
+&lt;li&gt;Recovery keys, printed and stored in a fire safe vault.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You &lt;em&gt;must have redundancy&lt;/em&gt;, if you do not you &lt;strong&gt;run the risk of getting locked out of accounts&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not a fan of SMS two factor (which runs rampant), nor am I a fan of &amp;ldquo;get a prompt because you&amp;rsquo;re signed in elsewhere&amp;rdquo; style.&lt;/p&gt;
+&lt;p&gt;Accounts that should be secured with 2FA:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accounts that have personal or financial information (e.g. online banking)&lt;/li&gt;
+&lt;li&gt;Accounts that manage other accounts (e.g. email accounts)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With 2FA set up, even if the bank you use has a breach that leaks your password, nobody will be able to get into your account unless they also have your security key or phone.&lt;/p&gt;
+&lt;h2 id=&#34;the-final-takeaway&#34;&gt;The Final Takeaway&lt;/h2&gt;
+&lt;p&gt;The main takeaway here is that your username/password combinations for online services should &lt;em&gt;not&lt;/em&gt; be trusted to remain secret.
+Your job is to ensure that when your account credentials are inevitably leaked online, it has little to no impact on you.
+You can achieve this via using a password manager to manage many distinct passwords, and securing all the important accounts with two-factor authentication.&lt;/p&gt;
+&lt;p&gt;Remember that this is all mainly to stop malicious third parties on the internet - all of this falls apart if someone gets physical access to your unlocked computer, or has a gun to your head.&lt;/p&gt;
+&lt;p&gt;Regardless, I hope this has been helpful! Please reach out to me on Twitter @wneville_ with any thoughts or criticisms you may have, always love a good chat about security.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
